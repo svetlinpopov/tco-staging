@@ -7,22 +7,22 @@
             </a>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#" wire:navigate class="{{ request()->routeIs('clients') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
+            <nav class="hidden lg:flex items-center">
+                <x-ui.nav-item href="#" wire:navigate :active="request()->routeIs('clients')">
                     {{ __('navlinks.clients') }}
-                </a>
-                <a href="#" wire:navigate class="{{ request()->routeIs('therapists') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
+                </x-ui.nav-item>
+                <x-ui.nav-item href="#" wire:navigate :active="request()->routeIs('therapists')">
                     {{ __('navlinks.therapists') }}
-                </a>
-                <a href="#" wire:navigate class="{{ request()->routeIs('companies') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
+                </x-ui.nav-item>
+                <x-ui.nav-item href="#" wire:navigate :active="request()->routeIs('companies')">
                     {{ __('navlinks.companies') }}
-                </a>
-                <a href="{{ route('about') }}" wire:navigate class="{{ request()->routeIs('about') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
+                </x-ui.nav-item>
+                <x-ui.nav-item href="{{ route('about') }}" wire:navigate :active="request()->routeIs('about')">
                     {{ __('navlinks.about') }}
-                </a>
-                <a href="#" wire:navigate class="{{ request()->routeIs('contact') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
+                </x-ui.nav-item>
+                <x-ui.nav-item href="#" wire:navigate :active="request()->routeIs('contact')">
                     {{ __('navlinks.contact') }}
-                </a>
+                </x-ui.nav-item>
             </nav>
 
             <div class="flex items-center space-x-4">

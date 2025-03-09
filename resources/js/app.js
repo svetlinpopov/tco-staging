@@ -16,6 +16,9 @@ function initializeAll() {
 
     // Initialize header background transition on scroll
     initHeaderBackgroundTransition();
+
+    // Initalize nav-links pressed effect
+    initNavLinks();
 }
 
 // Initial page load
@@ -32,16 +35,29 @@ document.addEventListener('livewire:init', () => {
     });
 });
 
-// After Livewire navigation
-document.addEventListener('livewire:navigated', initializeAll);
+/**
+ * Initialize Navigation Link active states
+ */
+function initNavLinks() {
+    const navLinks = document.querySelectorAll('.nav-item');
 
-// Listen for Livewire events
-document.addEventListener('livewire:init', () => {
-    Livewire.on('language-changed', () => {
-        // Will be used for future SPA functionality
-        initializeAll();
+    navLinks.forEach(link => {
+        // Handle mousedown for active state
+        link.addEventListener('mousedown', function() {
+            this.classList.add('is-pressed');
+        });
+
+        // Handle mouseup to restore state
+        link.addEventListener('mouseup', function() {
+            this.classList.remove('is-pressed');
+        });
+
+        // Handle mouseout in case user moves away while pressing
+        link.addEventListener('mouseout', function() {
+            this.classList.remove('is-pressed');
+        });
     });
-});
+}
 
 /**
  * Initialize full page scroll functionality

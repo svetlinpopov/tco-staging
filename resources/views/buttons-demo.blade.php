@@ -102,15 +102,18 @@
                     </div>
                 </div>
 
-                <!-- Menu Link Items -->
+                <!-- Nav Menu Links -->
                 <div class="p-6 border rounded-lg bg-[#C1B1A8]">
-                    <h3 class="font-semibold mb-4">Menu Link Items</h3>
-                    <div class="space-y-2 w-full">
-                        <x-ui.button variant="menu-item" class="active">Home</x-ui.button>
-                        <x-ui.button variant="menu-item">About</x-ui.button>
-                        <x-ui.button variant="menu-item">Services</x-ui.button>
+                    <h3 class="font-semibold mb-4">Nav Menu Links</h3>
+                    <div class="space-y-4">
+                        <div class="space-x-4">
+                            <x-ui.nav-item href="#" active>Home</x-ui.nav-item>
+                            <x-ui.nav-item href="#">About</x-ui.nav-item>
+                            <x-ui.nav-item href="#">Services</x-ui.nav-item>
+                            <x-ui.nav-item href="#" disabled>Disabled</x-ui.nav-item>
+                        </div>
                         <div class="pt-2 text-sm text-gray-600">
-                            <code class="bg-gray-100 p-1 rounded">.btn.btn-menu-item</code>
+                            <code class="bg-gray-100 p-1 rounded">.nav-item</code>
                         </div>
                     </div>
                 </div>
