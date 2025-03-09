@@ -6,5 +6,5 @@ return [
     'companies' => 'For Companies',
     'about' => 'About Us',
     'contact' => 'Contact Us',
-
+    'ctamatched' => 'Get Matched',
 ];

@@ -30,9 +30,9 @@
                 <livewire:language-switcher />
 
                 <!-- CTA Button -->
-                <a href="#" wire:navigate class="hidden sm:inline-flex items-center px-5 py-2 border border-white text-sm font-medium rounded-md bg-transparent hover:bg-white/20 focus:outline-none focus:ring-1 text-white">
-                    Get Started
-                </a>
+                <x-ui.button variant="header" href="#" wire:navigate class="hidden sm:inline-flex">
+                    {{ __('navlinks.ctamatched') }}
+                </x-ui.button>
 
                 <!-- Mobile menu button -->
                 <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md hover:bg-white/20 focus:outline-none text-white">
@@ -48,25 +48,25 @@
     <div id="mobile-menu" class="hidden lg:hidden w-full">
         <div class="px-4 pt-2 pb-3 space-y-1 border-t border-white/20 bg-del-rio">
             <a href="#" wire:navigate class="{{ request()->routeIs('clients') ? 'bg-white/20 font-medium' : 'hover:bg-white/10' }} block px-3 py-2 rounded-md text-base text-white">
-                {{ __('For Clients') }}
+                {{ __('navlinks.clients') }}
             </a>
             <a href="#" wire:navigate class="{{ request()->routeIs('therapists') ? 'bg-white/20 font-medium' : 'hover:bg-white/10' }} block px-3 py-2 rounded-md text-base text-white">
-                {{ __('For Therapists') }}
+                {{ __('navlinks.therapists') }}
             </a>
             <a href="#" wire:navigate class="{{ request()->routeIs('companies') ? 'bg-white/20 font-medium' : 'hover:bg-white/10' }} block px-3 py-2 rounded-md text-base text-white">
-                {{ __('For Companies') }}
+                {{ __('navlinks.companies') }}
             </a>
             <a href="#" wire:navigate class="{{ request()->routeIs('about') ? 'bg-white/20 font-medium' : 'hover:bg-white/10' }} block px-3 py-2 rounded-md text-base text-white">
-                {{ __('About Us') }}
+                {{ __('navlinks.about') }}
             </a>
             <a href="#" wire:navigate class="{{ request()->routeIs('contact') ? 'bg-white/20 font-medium' : 'hover:bg-white/10' }} block px-3 py-2 rounded-md text-base text-white">
-                {{ __('Contact Us') }}
+                {{ __('navlinks.contact') }}
             </a>
         </div>
         <div class="px-4 py-3 border-t border-white/20 bg-del-rio">
-            <a href="#" wire:navigate class="w-full flex items-center justify-center px-4 py-2 border border-white text-base font-medium rounded-md text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
-                Get Started
-            </a>
+            <x-ui.button variant="header" href="#" wire:navigate class="w-full">
+                Get matched
+            </x-ui.button>
         </div>
     </div>
 </header>

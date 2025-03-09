@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 class LanguageSwitcher extends Component
 {
     public $currentLocale;
-    public $locales = ['en', 'de', 'fr', 'es']; // Add your supported languages here
+    public $locales = ['en', 'de', 'fr', 'es', 'it']; // Add your supported languages here
 
     public function mount()
     {
@@ -24,6 +24,40 @@ class LanguageSwitcher extends Component
 
             // The page will be reloaded via the link's default behavior
         }
+    }
+
+    public function getLocaleDisplay($locale)
+    {
+        // Convert locale to 3-letter format
+        $localeMap = [
+            'en' => 'ENG',
+            'de' => 'DEU',
+            'fr' => 'FRA',
+            'es' => 'ESP',
+            'it' => 'ITA',
+            'nl' => 'NLD',
+            'pt' => 'POR',
+            'ru' => 'RUS',
+        ];
+
+        return $localeMap[$locale] ?? strtoupper($locale);
+    }
+
+    public function getLocaleName($locale)
+    {
+        // Full language names in their native languages
+        $localeNames = [
+            'en' => 'English',
+            'de' => 'Deutsch',
+            'fr' => 'Français',
+            'es' => 'Español',
+            'it' => 'Italiano',
+            'nl' => 'Nederlands',
+            'pt' => 'Português',
+            'ru' => 'Русский',
+        ];
+
+        return $localeNames[$locale] ?? ucfirst($locale);
     }
 
     public function render()
