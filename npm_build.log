@@ -1,0 +1,1295 @@
+Changes detected! Running npm build at Sat Mar  8 07:32:56 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-2b7WUezj.css  17.97 kB │ gzip: 4.25 kB
+public/build/assets/app-CiDRCBcd.js    1.03 kB │ gzip: 0.52 kB
+✓ built in 486ms
+Build completed at Sat Mar  8 07:32:58 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:33:45 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-D6luRBPN.css  17.97 kB │ gzip: 4.24 kB
+public/build/assets/app-CiDRCBcd.js    1.03 kB │ gzip: 0.52 kB
+✓ built in 431ms
+Build completed at Sat Mar  8 07:33:47 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:34:34 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-D6luRBPN.css  17.97 kB │ gzip: 4.24 kB
+public/build/assets/app-CiDRCBcd.js    1.03 kB │ gzip: 0.52 kB
+✓ built in 339ms
+Build completed at Sat Mar  8 07:34:36 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:34:52 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-2b7WUezj.css  17.97 kB │ gzip: 4.25 kB
+public/build/assets/app-CiDRCBcd.js    1.03 kB │ gzip: 0.52 kB
+✓ built in 383ms
+Build completed at Sat Mar  8 07:34:54 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:40:41 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-2b7WUezj.css  17.97 kB │ gzip: 4.25 kB
+public/build/assets/app-BM8JIL34.js    2.18 kB │ gzip: 0.91 kB
+✓ built in 341ms
+Build completed at Sat Mar  8 07:40:43 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:43:37 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-D3MO8VzZ.css  18.21 kB │ gzip: 4.32 kB
+public/build/assets/app-BM8JIL34.js    2.18 kB │ gzip: 0.91 kB
+✓ built in 354ms
+Build completed at Sat Mar  8 07:43:39 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:48:55 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-Cyy2BXhm.css  18.25 kB │ gzip: 4.34 kB
+public/build/assets/app-BM8JIL34.js    2.18 kB │ gzip: 0.91 kB
+✓ built in 341ms
+Build completed at Sat Mar  8 07:48:57 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:49:02 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-D12ij-FH.css  18.52 kB │ gzip: 4.39 kB
+public/build/assets/app-B-TvVZBi.js    2.59 kB │ gzip: 1.04 kB
+✓ built in 378ms
+Build completed at Sat Mar  8 07:49:04 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:53:23 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CXGfg-F6.css  18.50 kB │ gzip: 4.38 kB
+public/build/assets/app-B-TvVZBi.js    2.59 kB │ gzip: 1.04 kB
+✓ built in 374ms
+Build completed at Sat Mar  8 07:53:25 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:53:30 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CXGfg-F6.css  18.50 kB │ gzip: 4.38 kB
+public/build/assets/app-TuZNLtTU.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 374ms
+Build completed at Sat Mar  8 07:53:32 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 07:56:18 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CXGfg-F6.css  18.50 kB │ gzip: 4.38 kB
+public/build/assets/app-yu2V21Zf.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 315ms
+Build completed at Sat Mar  8 07:56:20 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:00:18 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-yu2V21Zf.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 362ms
+Build completed at Sat Mar  8 08:00:20 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:01:02 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-TuZNLtTU.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 369ms
+Build completed at Sat Mar  8 08:01:05 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:01:32 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-DeMUAkzG.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 363ms
+Build completed at Sat Mar  8 08:01:34 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:02:03 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-F_al23mN.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 393ms
+Build completed at Sat Mar  8 08:02:05 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:02:46 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-CMipY7No.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 267ms
+Build completed at Sat Mar  8 08:02:48 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:03:15 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-DE2vyOZb.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 503ms
+Build completed at Sat Mar  8 08:03:17 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:03:35 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-DeMUAkzG.js    3.19 kB │ gzip: 1.27 kB
+✓ built in 497ms
+Build completed at Sat Mar  8 08:03:37 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:13:27 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CLXI7Isl.css  18.40 kB │ gzip: 4.35 kB
+public/build/assets/app-BaRZO5gx.js    1.90 kB │ gzip: 0.78 kB
+✓ built in 469ms
+Build completed at Sat Mar  8 08:13:30 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:13:35 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-FXcPdHs7.css  18.37 kB │ gzip: 4.34 kB
+public/build/assets/app-BaRZO5gx.js    1.90 kB │ gzip: 0.78 kB
+✓ built in 298ms
+Build completed at Sat Mar  8 08:13:37 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:13:43 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-BvNU-trj.css  18.34 kB │ gzip: 4.32 kB
+public/build/assets/app-BaRZO5gx.js    1.90 kB │ gzip: 0.78 kB
+✓ built in 329ms
+Build completed at Sat Mar  8 08:13:45 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:16:56 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-B-ABtdGC.css  18.35 kB │ gzip: 4.33 kB
+public/build/assets/app-BaRZO5gx.js    1.90 kB │ gzip: 0.78 kB
+✓ built in 432ms
+Build completed at Sat Mar  8 08:16:58 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:18:34 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-B-ABtdGC.css  18.35 kB │ gzip: 4.33 kB
+public/build/assets/app-BaRZO5gx.js    1.90 kB │ gzip: 0.78 kB
+✓ built in 402ms
+Build completed at Sat Mar  8 08:18:35 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:20:19 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-DbQu-q_e.css  18.38 kB │ gzip: 4.33 kB
+public/build/assets/app-BaRZO5gx.js    1.90 kB │ gzip: 0.78 kB
+✓ built in 300ms
+Build completed at Sat Mar  8 08:20:20 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:25:28 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-DbQu-q_e.css  18.38 kB │ gzip: 4.33 kB
+public/build/assets/app-BaRZO5gx.js    1.90 kB │ gzip: 0.78 kB
+✓ built in 321ms
+Build completed at Sat Mar  8 08:25:30 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 08:30:17 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-CmU8FcHh.css  18.37 kB │ gzip: 4.33 kB
+public/build/assets/app-CeWvuFlu.js    2.17 kB │ gzip: 0.89 kB
+✓ built in 289ms
+Build completed at Sat Mar  8 08:30:18 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:13:51 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json             0.27 kB │ gzip: 0.15 kB
+public/build/assets/app-DtbgMXbg.css  18.36 kB │ gzip: 4.32 kB
+public/build/assets/app-CeWvuFlu.js    2.17 kB │ gzip: 0.89 kB
+✓ built in 318ms
+Build completed at Sat Mar  8 09:13:53 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:17:23 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-BNo819ZQ.css       18.42 kB │ gzip: 4.33 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 419ms
+Build completed at Sat Mar  8 09:17:25 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:27:55 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-Bq2K3duD.css       18.03 kB │ gzip: 4.22 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 618ms
+Build completed at Sat Mar  8 09:27:57 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:29:43 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-qaVJqhN_.css       18.06 kB │ gzip: 4.23 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 428ms
+Build completed at Sat Mar  8 09:29:45 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:33:28 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.19 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-ZhJTG3zd.css       17.99 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 449ms
+Build completed at Sat Mar  8 09:33:30 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:35:07 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.19 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-ZhJTG3zd.css       17.99 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 442ms
+Build completed at Sat Mar  8 09:35:09 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:36:32 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-BDQm-S6L.css       17.99 kB │ gzip: 4.19 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 390ms
+Build completed at Sat Mar  8 09:36:34 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:38:49 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-DSkVRyws.css       18.06 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 574ms
+Build completed at Sat Mar  8 09:38:51 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:39:15 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-CoeBvHU_.css       18.07 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 471ms
+Build completed at Sat Mar  8 09:39:16 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:39:31 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-CoeBvHU_.css       18.07 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 439ms
+Build completed at Sat Mar  8 09:39:34 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:40:11 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-CoeBvHU_.css       18.07 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 397ms
+Build completed at Sat Mar  8 09:40:13 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:41:00 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-B-l4nuDV.css       18.05 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 413ms
+Build completed at Sat Mar  8 09:41:02 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 09:41:22 AM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                  0.40 kB │ gzip: 0.18 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg   8.81 kB │ gzip: 3.64 kB
+public/build/assets/app-B-l4nuDV.css       18.05 kB │ gzip: 4.21 kB
+public/build/assets/app-CeWvuFlu.js         2.17 kB │ gzip: 0.89 kB
+✓ built in 331ms
+Build completed at Sat Mar  8 09:41:24 AM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:02:57 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                 1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                  8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-DzmC8kl4.jpg       26.32 kB
+public/build/assets/hero-bg-mobile-640x960-BoIbMqWQ.jpg   35.43 kB
+public/build/assets/hero-bg-md-1024x576-DiytO49U.jpg      42.96 kB
+public/build/assets/hero-bg-lg-1536x864-D8t11qFm.jpg      85.53 kB
+public/build/assets/hero-bg-xl-1920x1080-BNONjhKA.jpg    100.16 kB
+public/build/assets/hero-bg-2xl-2560x1440-B65AYS_w.jpg   104.00 kB
+public/build/assets/app-Hod3pubq.css                      18.76 kB │ gzip: 4.41 kB
+public/build/assets/app-CeWvuFlu.js                        2.17 kB │ gzip: 0.89 kB
+✓ built in 444ms
+Build completed at Sat Mar  8 12:02:59 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:04:59 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                 1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                  8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-DzmC8kl4.jpg       26.32 kB
+public/build/assets/hero-bg-mobile-640x960-BoIbMqWQ.jpg   35.43 kB
+public/build/assets/hero-bg-md-1024x576-DiytO49U.jpg      42.96 kB
+public/build/assets/hero-bg-lg-1536x864-D8t11qFm.jpg      85.53 kB
+public/build/assets/hero-bg-xl-1920x1080-BNONjhKA.jpg    100.16 kB
+public/build/assets/hero-bg-2xl-2560x1440-B65AYS_w.jpg   104.00 kB
+public/build/assets/app-BHlbcweh.css                      18.84 kB │ gzip: 4.44 kB
+public/build/assets/app-CeWvuFlu.js                        2.17 kB │ gzip: 0.89 kB
+✓ built in 405ms
+Build completed at Sat Mar  8 12:05:01 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:25:44 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-l3Z7L_Bx.css                     18.84 kB │ gzip: 4.44 kB
+public/build/assets/app-CeWvuFlu.js                       2.17 kB │ gzip: 0.89 kB
+✓ built in 550ms
+Build completed at Sat Mar  8 12:25:46 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:41:22 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-CmmILIHY.css                     19.37 kB │ gzip: 4.44 kB
+public/build/assets/app-CeWvuFlu.js                       2.17 kB │ gzip: 0.89 kB
+✓ built in 534ms
+Build completed at Sat Mar  8 12:41:24 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:43:52 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-C5ZQv8Bu.css                     18.87 kB │ gzip: 4.42 kB
+public/build/assets/app-DgpJzRUF.js                       1.39 kB │ gzip: 0.62 kB
+✓ built in 512ms
+Build completed at Sat Mar  8 12:43:54 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:47:15 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-C5ZQv8Bu.css                     18.87 kB │ gzip: 4.42 kB
+public/build/assets/app-ClWGCp8o.js                       2.07 kB │ gzip: 0.86 kB
+✓ built in 463ms
+Build completed at Sat Mar  8 12:47:17 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:52:27 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-C5ZQv8Bu.css                     18.87 kB │ gzip: 4.42 kB
+public/build/assets/app-ClWGCp8o.js                       2.07 kB │ gzip: 0.86 kB
+✓ built in 420ms
+Build completed at Sat Mar  8 12:52:29 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:52:39 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-DAht0OuE.css                     19.11 kB │ gzip: 4.46 kB
+public/build/assets/app-ClWGCp8o.js                       2.07 kB │ gzip: 0.86 kB
+✓ built in 422ms
+Build completed at Sat Mar  8 12:52:41 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:57:11 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-DnVXddcV.css                     19.11 kB │ gzip: 4.47 kB
+public/build/assets/app-ClWGCp8o.js                       2.07 kB │ gzip: 0.86 kB
+✓ built in 651ms
+Build completed at Sat Mar  8 12:57:13 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 12:59:07 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-C0B2xJoQ.css                     19.11 kB │ gzip: 4.47 kB
+public/build/assets/app-ClWGCp8o.js                       2.07 kB │ gzip: 0.86 kB
+✓ built in 343ms
+Build completed at Sat Mar  8 12:59:09 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:05:43 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-BIMTo98j.css                     19.16 kB │ gzip: 4.47 kB
+public/build/assets/app-ClWGCp8o.js                       2.07 kB │ gzip: 0.86 kB
+✓ built in 595ms
+Build completed at Sat Mar  8 01:05:45 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:07:59 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-CPhlV7Ud.css                     19.16 kB │ gzip: 4.46 kB
+public/build/assets/app-ClWGCp8o.js                       2.07 kB │ gzip: 0.86 kB
+✓ built in 595ms
+Build completed at Sat Mar  8 01:08:01 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:10:49 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-CPhlV7Ud.css                     19.16 kB │ gzip: 4.46 kB
+public/build/assets/app-jtkCD2Ne.js                       2.32 kB │ gzip: 0.92 kB
+✓ built in 516ms
+Build completed at Sat Mar  8 01:10:51 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:10:57 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-BTtAQKs7.css                     19.40 kB │ gzip: 4.51 kB
+public/build/assets/app-jtkCD2Ne.js                       2.32 kB │ gzip: 0.92 kB
+✓ built in 384ms
+Build completed at Sat Mar  8 01:10:58 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:15:22 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-BFDD8oP7.css                     19.41 kB │ gzip: 4.52 kB
+public/build/assets/app-jtkCD2Ne.js                       2.32 kB │ gzip: 0.92 kB
+✓ built in 497ms
+Build completed at Sat Mar  8 01:15:24 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:43:51 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+
+../fonts/inter-tight/InterTight-Regular.ttf referenced in ../fonts/inter-tight/InterTight-Regular.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-ExtraLightItalic.ttf referenced in ../fonts/inter-tight/InterTight-ExtraLightItalic.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-SemiBold.ttf referenced in ../fonts/inter-tight/InterTight-SemiBold.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                1.49 kB │ gzip: 0.37 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                 8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg      20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg     28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg  31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg     43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg    58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg   87.38 kB
+public/build/assets/app-DN3Xdx8I.css                     19.94 kB │ gzip: 4.65 kB
+public/build/assets/app-jtkCD2Ne.js                       2.32 kB │ gzip: 0.92 kB
+✓ built in 438ms
+Build completed at Sat Mar  8 01:43:53 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:46:36 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+
+../fonts/inter-tight/InterTight-Regular.ttf referenced in ../fonts/inter-tight/InterTight-Regular.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-ExtraLightItalic.ttf referenced in ../fonts/inter-tight/InterTight-ExtraLightItalic.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-SemiBold.ttf referenced in ../fonts/inter-tight/InterTight-SemiBold.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                              5.56 kB │ gzip: 0.80 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                               8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg                    20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg                   28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg                31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg                   43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg                  58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg                 87.38 kB
+public/build/assets/InterTight-Regular-DazP3ozs.ttf                   305.47 kB
+public/build/assets/InterTight-Light-B7d-97ny.ttf                     305.90 kB
+public/build/assets/InterTight-Thin-DPm7Z3Jy.ttf                      305.94 kB
+public/build/assets/InterTight-ExtraLight-CVgqsRL8.ttf                306.25 kB
+public/build/assets/InterTight-Medium-BPdn3PI5.ttf                    308.66 kB
+public/build/assets/InterTight-SemiBold-DmsS3AUT.ttf                  309.40 kB
+public/build/assets/InterTight-Bold-BS7jnKD5.ttf                      310.02 kB
+public/build/assets/InterTight-Black-tts667sa.ttf                     311.00 kB
+public/build/assets/InterTight-ExtraBold-BavLzL8i.ttf                 311.05 kB
+public/build/assets/InterTight-Italic-Bs-xk2-X.ttf                    312.36 kB
+public/build/assets/InterTight-ThinItalic-wkiJcNBV.ttf                312.67 kB
+public/build/assets/InterTight-LightItalic-D5w0SJAL.ttf               312.82 kB
+public/build/assets/InterTight-ExtraLightItalic-BLcsmRvr.ttf          313.07 kB
+public/build/assets/InterTight-MediumItalic-CEf5J6qs.ttf              315.59 kB
+public/build/assets/InterTight-SemiBoldItalic-BmNnWeCa.ttf            316.33 kB
+public/build/assets/InterTight-BoldItalic-Bpc-JLYd.ttf                316.84 kB
+public/build/assets/InterTight-ExtraBoldItalic-CE0mwN4b.ttf           317.72 kB
+public/build/assets/InterTight-BlackItalic-CzE2jCTF.ttf               317.75 kB
+public/build/assets/InterTight-VariableFont_wght-Catr4xtk.ttf         580.57 kB
+public/build/assets/InterTight-Italic-VariableFont_wght-TGsW8Xm3.ttf  592.74 kB
+public/build/assets/app-DN3Xdx8I.css                                   19.94 kB │ gzip: 4.65 kB
+public/build/assets/app-jtkCD2Ne.js                                     2.32 kB │ gzip: 0.92 kB
+✓ built in 587ms
+Build completed at Sat Mar  8 01:46:38 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:47:43 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+
+../fonts/inter-tight/InterTight-Regular.ttf referenced in ../fonts/inter-tight/InterTight-Regular.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-ExtraLightItalic.ttf referenced in ../fonts/inter-tight/InterTight-ExtraLightItalic.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-SemiBold.ttf referenced in ../fonts/inter-tight/InterTight-SemiBold.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                              5.56 kB │ gzip: 0.80 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                               8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg                    20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg                   28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg                31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg                   43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg                  58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg                 87.38 kB
+public/build/assets/InterTight-Regular-DazP3ozs.ttf                   305.47 kB
+public/build/assets/InterTight-Light-B7d-97ny.ttf                     305.90 kB
+public/build/assets/InterTight-Thin-DPm7Z3Jy.ttf                      305.94 kB
+public/build/assets/InterTight-ExtraLight-CVgqsRL8.ttf                306.25 kB
+public/build/assets/InterTight-Medium-BPdn3PI5.ttf                    308.66 kB
+public/build/assets/InterTight-SemiBold-DmsS3AUT.ttf                  309.40 kB
+public/build/assets/InterTight-Bold-BS7jnKD5.ttf                      310.02 kB
+public/build/assets/InterTight-Black-tts667sa.ttf                     311.00 kB
+public/build/assets/InterTight-ExtraBold-BavLzL8i.ttf                 311.05 kB
+public/build/assets/InterTight-Italic-Bs-xk2-X.ttf                    312.36 kB
+public/build/assets/InterTight-ThinItalic-wkiJcNBV.ttf                312.67 kB
+public/build/assets/InterTight-LightItalic-D5w0SJAL.ttf               312.82 kB
+public/build/assets/InterTight-ExtraLightItalic-BLcsmRvr.ttf          313.07 kB
+public/build/assets/InterTight-MediumItalic-CEf5J6qs.ttf              315.59 kB
+public/build/assets/InterTight-SemiBoldItalic-BmNnWeCa.ttf            316.33 kB
+public/build/assets/InterTight-BoldItalic-Bpc-JLYd.ttf                316.84 kB
+public/build/assets/InterTight-ExtraBoldItalic-CE0mwN4b.ttf           317.72 kB
+public/build/assets/InterTight-BlackItalic-CzE2jCTF.ttf               317.75 kB
+public/build/assets/InterTight-VariableFont_wght-Catr4xtk.ttf         580.57 kB
+public/build/assets/InterTight-Italic-VariableFont_wght-TGsW8Xm3.ttf  592.74 kB
+public/build/assets/app-DN3Xdx8I.css                                   19.94 kB │ gzip: 4.65 kB
+public/build/assets/app-jtkCD2Ne.js                                     2.32 kB │ gzip: 0.92 kB
+✓ built in 466ms
+Build completed at Sat Mar  8 01:47:45 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:56:13 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+
+../fonts/inter-tight/InterTight-Regular.ttf referenced in ../fonts/inter-tight/InterTight-Regular.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-ExtraLightItalic.ttf referenced in ../fonts/inter-tight/InterTight-ExtraLightItalic.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../fonts/inter-tight/InterTight-SemiBold.ttf referenced in ../fonts/inter-tight/InterTight-SemiBold.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                              5.56 kB │ gzip: 0.80 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                               8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg                    20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg                   28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg                31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg                   43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg                  58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg                 87.38 kB
+public/build/assets/InterTight-Regular-DazP3ozs.ttf                   305.47 kB
+public/build/assets/InterTight-Light-B7d-97ny.ttf                     305.90 kB
+public/build/assets/InterTight-Thin-DPm7Z3Jy.ttf                      305.94 kB
+public/build/assets/InterTight-ExtraLight-CVgqsRL8.ttf                306.25 kB
+public/build/assets/InterTight-Medium-BPdn3PI5.ttf                    308.66 kB
+public/build/assets/InterTight-SemiBold-DmsS3AUT.ttf                  309.40 kB
+public/build/assets/InterTight-Bold-BS7jnKD5.ttf                      310.02 kB
+public/build/assets/InterTight-Black-tts667sa.ttf                     311.00 kB
+public/build/assets/InterTight-ExtraBold-BavLzL8i.ttf                 311.05 kB
+public/build/assets/InterTight-Italic-Bs-xk2-X.ttf                    312.36 kB
+public/build/assets/InterTight-ThinItalic-wkiJcNBV.ttf                312.67 kB
+public/build/assets/InterTight-LightItalic-D5w0SJAL.ttf               312.82 kB
+public/build/assets/InterTight-ExtraLightItalic-BLcsmRvr.ttf          313.07 kB
+public/build/assets/InterTight-MediumItalic-CEf5J6qs.ttf              315.59 kB
+public/build/assets/InterTight-SemiBoldItalic-BmNnWeCa.ttf            316.33 kB
+public/build/assets/InterTight-BoldItalic-Bpc-JLYd.ttf                316.84 kB
+public/build/assets/InterTight-ExtraBoldItalic-CE0mwN4b.ttf           317.72 kB
+public/build/assets/InterTight-BlackItalic-CzE2jCTF.ttf               317.75 kB
+public/build/assets/InterTight-VariableFont_wght-Catr4xtk.ttf         580.57 kB
+public/build/assets/InterTight-Italic-VariableFont_wght-TGsW8Xm3.ttf  592.74 kB
+public/build/assets/app-DN3Xdx8I.css                                   19.94 kB │ gzip: 4.65 kB
+public/build/assets/app-jtkCD2Ne.js                                     2.32 kB │ gzip: 0.92 kB
+✓ built in 552ms
+Build completed at Sat Mar  8 01:56:15 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 01:57:44 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                              5.56 kB │ gzip: 0.80 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                               8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg                    20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg                   28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg                31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg                   43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg                  58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg                 87.38 kB
+public/build/assets/InterTight-Regular-DazP3ozs.ttf                   305.47 kB
+public/build/assets/InterTight-Light-B7d-97ny.ttf                     305.90 kB
+public/build/assets/InterTight-Thin-DPm7Z3Jy.ttf                      305.94 kB
+public/build/assets/InterTight-ExtraLight-CVgqsRL8.ttf                306.25 kB
+public/build/assets/InterTight-Medium-BPdn3PI5.ttf                    308.66 kB
+public/build/assets/InterTight-SemiBold-DmsS3AUT.ttf                  309.40 kB
+public/build/assets/InterTight-Bold-BS7jnKD5.ttf                      310.02 kB
+public/build/assets/InterTight-Black-tts667sa.ttf                     311.00 kB
+public/build/assets/InterTight-ExtraBold-BavLzL8i.ttf                 311.05 kB
+public/build/assets/InterTight-Italic-Bs-xk2-X.ttf                    312.36 kB
+public/build/assets/InterTight-ThinItalic-wkiJcNBV.ttf                312.67 kB
+public/build/assets/InterTight-LightItalic-D5w0SJAL.ttf               312.82 kB
+public/build/assets/InterTight-ExtraLightItalic-BLcsmRvr.ttf          313.07 kB
+public/build/assets/InterTight-MediumItalic-CEf5J6qs.ttf              315.59 kB
+public/build/assets/InterTight-SemiBoldItalic-BmNnWeCa.ttf            316.33 kB
+public/build/assets/InterTight-BoldItalic-Bpc-JLYd.ttf                316.84 kB
+public/build/assets/InterTight-ExtraBoldItalic-CE0mwN4b.ttf           317.72 kB
+public/build/assets/InterTight-BlackItalic-CzE2jCTF.ttf               317.75 kB
+public/build/assets/InterTight-VariableFont_wght-Catr4xtk.ttf         580.57 kB
+public/build/assets/InterTight-Italic-VariableFont_wght-TGsW8Xm3.ttf  592.74 kB
+public/build/assets/app-CxdzsyB8.css                                   19.95 kB │ gzip: 4.66 kB
+public/build/assets/app-jtkCD2Ne.js                                     2.32 kB │ gzip: 0.92 kB
+✓ built in 569ms
+Build completed at Sat Mar  8 01:57:46 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 02:10:28 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                              5.56 kB │ gzip: 0.80 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                               8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg                    20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg                   28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg                31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg                   43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg                  58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg                 87.38 kB
+public/build/assets/InterTight-Regular-DazP3ozs.ttf                   305.47 kB
+public/build/assets/InterTight-Light-B7d-97ny.ttf                     305.90 kB
+public/build/assets/InterTight-Thin-DPm7Z3Jy.ttf                      305.94 kB
+public/build/assets/InterTight-ExtraLight-CVgqsRL8.ttf                306.25 kB
+public/build/assets/InterTight-Medium-BPdn3PI5.ttf                    308.66 kB
+public/build/assets/InterTight-SemiBold-DmsS3AUT.ttf                  309.40 kB
+public/build/assets/InterTight-Bold-BS7jnKD5.ttf                      310.02 kB
+public/build/assets/InterTight-Black-tts667sa.ttf                     311.00 kB
+public/build/assets/InterTight-ExtraBold-BavLzL8i.ttf                 311.05 kB
+public/build/assets/InterTight-Italic-Bs-xk2-X.ttf                    312.36 kB
+public/build/assets/InterTight-ThinItalic-wkiJcNBV.ttf                312.67 kB
+public/build/assets/InterTight-LightItalic-D5w0SJAL.ttf               312.82 kB
+public/build/assets/InterTight-ExtraLightItalic-BLcsmRvr.ttf          313.07 kB
+public/build/assets/InterTight-MediumItalic-CEf5J6qs.ttf              315.59 kB
+public/build/assets/InterTight-SemiBoldItalic-BmNnWeCa.ttf            316.33 kB
+public/build/assets/InterTight-BoldItalic-Bpc-JLYd.ttf                316.84 kB
+public/build/assets/InterTight-ExtraBoldItalic-CE0mwN4b.ttf           317.72 kB
+public/build/assets/InterTight-BlackItalic-CzE2jCTF.ttf               317.75 kB
+public/build/assets/InterTight-VariableFont_wght-Catr4xtk.ttf         580.57 kB
+public/build/assets/InterTight-Italic-VariableFont_wght-TGsW8Xm3.ttf  592.74 kB
+public/build/assets/app-CxdzsyB8.css                                   19.95 kB │ gzip: 4.66 kB
+public/build/assets/app-DcHuvEwX.js                                     2.48 kB │ gzip: 0.98 kB
+✓ built in 891ms
+Build completed at Sat Mar  8 02:10:30 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 02:13:04 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                      2.11 kB │ gzip: 0.48 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                       8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg            20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg           28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg        31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg           43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg          58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg         87.38 kB
+public/build/assets/InterTight-Regular-DazP3ozs.ttf           305.47 kB
+public/build/assets/InterTight-SemiBold-DmsS3AUT.ttf          309.40 kB
+public/build/assets/InterTight-ExtraLightItalic-BLcsmRvr.ttf  313.07 kB
+public/build/assets/app-BmfAI3BY.css                           19.99 kB │ gzip: 4.67 kB
+public/build/assets/app-DcHuvEwX.js                             2.48 kB │ gzip: 0.98 kB
+✓ built in 483ms
+Build completed at Sat Mar  8 02:13:06 PM UTC 2025
+----------------------------------------
+Changes detected! Running npm build at Sat Mar  8 02:16:40 PM UTC 2025
+
+> build
+> vite build
+
+vite v6.2.0 building for production...
+transforming...
+✓ 13 modules transformed.
+rendering chunks...
+computing gzip size...
+public/build/manifest.json                                      2.11 kB │ gzip: 0.48 kB
+public/build/assets/tco-logo-CqdE8Lx2.svg                       8.81 kB │ gzip: 3.64 kB
+public/build/assets/hero-bg-sm-768x432-_DCROnhS.jpg            20.88 kB
+public/build/assets/hero-bg-md-1024x576-eO1lXl5R.jpg           28.91 kB
+public/build/assets/hero-bg-mobile-640x960-Zs0st9tI.jpg        31.08 kB
+public/build/assets/hero-bg-lg-1536x864-DvJPklmF.jpg           43.80 kB
+public/build/assets/hero-bg-xl-1920x1080-DowOkJCS.jpg          58.61 kB
+public/build/assets/hero-bg-2xl-2560x1440-CPK-H1vJ.jpg         87.38 kB
+public/build/assets/InterTight-Regular-DazP3ozs.ttf           305.47 kB
+public/build/assets/InterTight-SemiBold-DmsS3AUT.ttf          309.40 kB
+public/build/assets/InterTight-ExtraLightItalic-BLcsmRvr.ttf  313.07 kB
+public/build/assets/app-BmfAI3BY.css                           19.99 kB │ gzip: 4.67 kB
+public/build/assets/app-DcHuvEwX.js                             2.48 kB │ gzip: 0.98 kB
+✓ built in 508ms
+Build completed at Sat Mar  8 02:16:42 PM UTC 2025
+----------------------------------------

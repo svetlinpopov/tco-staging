@@ -1,0 +1,159 @@
+@import 'tailwindcss';
+
+@source "../views";
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+
+/* Inter Tight Font Face Declarations - Only specific weights needed */
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('../fonts/inter-tight/static/InterTight-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('../fonts/inter-tight/static/InterTight-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('../fonts/inter-tight/static/InterTight-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@theme {
+    --font-sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-del-rio: #b3998a;
+    --color-pale-slate: #ccc3bc;
+    --color-black-haze: #e4e0d5;
+    --color-milky: #f1eae6;
+    --color-blue-yankees: #242B3C;
+}
+
+/* Set the font-family for the body */
+body {
+    font-family: var(--font-sans);
+}
+
+/* Background for Section 1 - Hero */
+#section1 {
+    background-image: url('../img/backgrounds/hero-bg-mobile-640x960.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+/* Responsive backgrounds */
+@media (min-width: 640px) {
+    #section1 {
+        background-image: url('../img/backgrounds/hero-bg-sm-768x432.jpg');
+    }
+}
+
+@media (min-width: 768px) {
+    #section1 {
+        background-image: url('../img/backgrounds/hero-bg-md-1024x576.jpg');
+    }
+}
+
+@media (min-width: 1024px) {
+    #section1 {
+        background-image: url('../img/backgrounds/hero-bg-lg-1536x864.jpg');
+    }
+}
+
+@media (min-width: 1280px) {
+    #section1 {
+        background-image: url('../img/backgrounds/hero-bg-xl-1920x1080.jpg');
+    }
+}
+
+@media (min-width: 1536px) {
+    #section1 {
+        background-image: url('../img/backgrounds/hero-bg-2xl-2560x1440.jpg');
+    }
+}
+
+/* General background positioning for all sections with backgrounds */
+.snap-section {
+    background-position: center bottom !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**
+ * Container and Section Styles
+ * All scroll-snap properties completely removed
+ */
+.snap-container {
+    /* Keeping only essential properties for a normal scrollable container */
+    min-height: 100vh;
+    overflow-y: auto;
+    /* No scroll-snap-type */
+    /* No scroll-behavior */
+}
+
+.snap-section {
+    /* Essential section styling without any snap behavior */
+    min-height: 100vh;
+    /* No scroll-snap-align */
+    /* No scroll-snap-stop */
+}
+
+/**
+ * Side Navigation Styles
+ */
+.side-nav-dot {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    width: 8px;
+    height: 8px;
+    border: none;
+}
+
+.side-nav-dot.active {
+    background-color: white;
+    transform: scale(1.5);
+    width: 10px;
+    height: 10px;
+}
+
+/* Hover effect for side navigation dots */
+.side-nav-dot:hover {
+    background-color: white;
+    transform: scale(1.3);
+}
+
+/* Transition sizes for dots near the active one */
+.side-nav-dot.active-neighbor-1 {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.side-nav-dot.active-neighbor-2 {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/**
+ * Header Styles
+ */
+header {
+    transition: background-color 0.5s ease;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.header-padding {
+    transition: padding 0.5s ease;
+}
