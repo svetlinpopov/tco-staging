@@ -3,7 +3,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="turbo-cache-control" content="no-preview">
 
-<title>{{ $title ?? 'Laravel' }}</title>
+<title>{{ isset($title) ? "Therapetico - $title" : 'Therapetico' }}</title>
 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 @livewireStyles

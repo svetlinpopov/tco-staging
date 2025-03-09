@@ -17,7 +17,7 @@
                 <a href="#" wire:navigate class="{{ request()->routeIs('companies') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
                     {{ __('navlinks.companies') }}
                 </a>
-                <a href="#" wire:navigate class="{{ request()->routeIs('about') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
+                <a href="{{ route('about') }}" wire:navigate class="{{ request()->routeIs('about') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">
                     {{ __('navlinks.about') }}
                 </a>
                 <a href="#" wire:navigate class="{{ request()->routeIs('contact') ? 'font-medium' : 'hover:opacity-80' }} text-white text-base">

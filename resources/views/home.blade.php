@@ -1,4 +1,4 @@
-<x-layouts.frontend>
+<x-layouts.frontend :title="$title">
     @include('components.side-navigation')
 
     <div class="snap-container">

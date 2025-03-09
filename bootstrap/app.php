@@ -11,9 +11,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->alias([
-            'setlocale' => \App\Http\Middleware\SetLocale::class,
-        ]);
+        // Add SetLocale to the web middleware group
+        $middleware->web(append: [\App\Http\Middleware\SetLocale::class]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

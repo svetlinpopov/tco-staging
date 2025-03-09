@@ -1,30 +1,33 @@
 <?php
 
 namespace App\Livewire;
+
 use Livewire\Component;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class LanguageSwitcher extends Component
 {
+    public $currentLocale;
+    public $locales = ['en', 'de', 'fr', 'es']; // Add your supported languages here
+
+    public function mount()
+    {
+        $this->currentLocale = App::getLocale();
+    }
+
     public function switchLocale($locale)
     {
-        if (in_array($locale, config('app.supported_locales'))) {
-            session()->put('locale', $locale);
+        if (in_array($locale, $this->locales)) {
+            // Store locale in session
+            Session::put('locale', $locale);
 
-            // Get current route name and parameters
-            $routeName = request()->route()->getName();
-            $parameters = request()->route()->parameters();
-            $parameters['locale'] = $locale;
-
-            // Redirect to the same route with new locale
-            return redirect()->route($routeName, $parameters);
+            // The page will be reloaded via the link's default behavior
         }
     }
 
     public function render()
     {
-        return view('livewire.language-switcher', [
-            'currentLocale' => app()->getLocale(),
-            'locales' => config('app.supported_locales')
-        ]);
+        return view('livewire.language-switcher');
     }
 }

@@ -3,7 +3,8 @@ import.meta.glob([
     '../fonts/**',
 ]);
 
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize all functionality
+function initializeAll() {
     // Initialize full page scroll functionality
     initFullPageScroll();
 
@@ -15,6 +16,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize header background transition on scroll
     initHeaderBackgroundTransition();
+}
+
+// Initial page load
+document.addEventListener('DOMContentLoaded', initializeAll);
+
+// After Livewire navigation
+document.addEventListener('livewire:navigated', initializeAll);
+
+// Listen for Livewire events
+document.addEventListener('livewire:init', () => {
+    Livewire.on('language-changed', () => {
+        // Will be used for future SPA functionality
+        initializeAll();
+    });
+});
+
+// After Livewire navigation
+document.addEventListener('livewire:navigated', initializeAll);
+
+// Listen for Livewire events
+document.addEventListener('livewire:init', () => {
+    Livewire.on('language-changed', () => {
+        // Will be used for future SPA functionality
+        initializeAll();
+    });
 });
 
 /**

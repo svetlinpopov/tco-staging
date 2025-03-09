@@ -1,7 +1,9 @@
+@props(['title' => null])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 <head>
-    @include('partials.head')
+    @include('partials.head', ['title' => $title])
 </head>
 <body class="font-sans antialiased min-h-screen bg-white">
     <!-- Explicitly using an outer container with normal overflow behavior -->
