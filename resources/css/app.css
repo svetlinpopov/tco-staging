@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './components/buttons.css';
 
 @source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -38,6 +39,9 @@
     --color-black-haze: #e4e0d5;
     --color-milky: #f1eae6;
     --color-blue-yankees: #242B3C;
+    --color-charcoal: #3E4659;
+    --color-tco-black: #06070B;
+
 }
 
 /* Set the font-family for the body */
