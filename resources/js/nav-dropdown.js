@@ -19,13 +19,19 @@ function initNavDropdowns() {
         // For desktop: Show dropdown on hover
         if (window.matchMedia('(min-width: 1024px)').matches) {
             container.addEventListener('mouseenter', function() {
-                dropdown.style.opacity = "1";
-                dropdown.style.visibility = "visible";
+                dropdown.style.visibility = 'visible';
+                // Use a small timeout to ensure the visibility change takes effect first
+                setTimeout(() => {
+                    dropdown.style.opacity = '1';
+                }, 10);
             });
 
             container.addEventListener('mouseleave', function() {
-                dropdown.style.opacity = "0";
-                dropdown.style.visibility = "hidden";
+                dropdown.style.opacity = '0';
+                // Wait for fade-out before hiding
+                setTimeout(() => {
+                    dropdown.style.visibility = 'hidden';
+                }, 500);
             });
         }
 
@@ -34,21 +40,30 @@ function initNavDropdowns() {
             e.preventDefault();
             e.stopPropagation();
 
-            const isVisible = dropdown.style.visibility === "visible";
+            const isVisible = dropdown.style.visibility === 'visible';
 
             // Close any open dropdown first
             if (openDropdown && openDropdown !== dropdown) {
-                openDropdown.style.opacity = "0";
-                openDropdown.style.visibility = "hidden";
+                openDropdown.style.opacity = '0';
+                // Wait for fade-out before hiding
+                setTimeout(() => {
+                    openDropdown.style.visibility = 'hidden';
+                }, 500);
             }
 
             if (isVisible) {
-                dropdown.style.opacity = "0";
-                dropdown.style.visibility = "hidden";
+                dropdown.style.opacity = '0';
+                // Wait for fade-out before hiding
+                setTimeout(() => {
+                    dropdown.style.visibility = 'hidden';
+                }, 500);
                 openDropdown = null;
             } else {
-                dropdown.style.opacity = "1";
-                dropdown.style.visibility = "visible";
+                dropdown.style.visibility = 'visible';
+                // Use a small timeout to ensure the visibility change takes effect first
+                setTimeout(() => {
+                    dropdown.style.opacity = '1';
+                }, 10);
                 openDropdown = dropdown;
             }
         });
@@ -62,16 +77,22 @@ function initNavDropdowns() {
     // Hide all dropdowns when clicking/touching elsewhere
     document.addEventListener('click', function() {
         dropdowns.forEach(dropdown => {
-            dropdown.style.opacity = "0";
-            dropdown.style.visibility = "hidden";
+            dropdown.style.opacity = '0';
+            // Wait for fade-out before hiding
+            setTimeout(() => {
+                dropdown.style.visibility = 'hidden';
+            }, 500);
         });
         openDropdown = null;
     });
 
     document.addEventListener('touchend', function() {
         dropdowns.forEach(dropdown => {
-            dropdown.style.opacity = "0";
-            dropdown.style.visibility = "hidden";
+            dropdown.style.opacity = '0';
+            // Wait for fade-out before hiding
+            setTimeout(() => {
+                dropdown.style.visibility = 'hidden';
+            }, 500);
         });
         openDropdown = null;
     }, { passive: true });

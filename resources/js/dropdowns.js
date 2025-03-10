@@ -29,7 +29,10 @@ function initNavDropdowns() {
 
         container.addEventListener('mouseleave', function() {
             dropdown.style.opacity = '0';
-            dropdown.style.visibility = 'hidden';
+            // Wait for fade-out before hiding
+            setTimeout(() => {
+                dropdown.style.visibility = 'hidden';
+            }, 500);
         });
 
         // Toggle on click (all devices)
@@ -41,10 +44,16 @@ function initNavDropdowns() {
 
             if (isVisible) {
                 dropdown.style.opacity = '0';
-                dropdown.style.visibility = 'hidden';
+                // Wait for fade-out before hiding
+                setTimeout(() => {
+                    dropdown.style.visibility = 'hidden';
+                }, 500);
             } else {
-                dropdown.style.opacity = '1';
                 dropdown.style.visibility = 'visible';
+                // Use a small timeout to ensure the visibility change takes effect first
+                setTimeout(() => {
+                    dropdown.style.opacity = '1';
+                }, 10);
             }
         });
 
@@ -58,7 +67,10 @@ function initNavDropdowns() {
     document.addEventListener('click', function() {
         document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
             dropdown.style.opacity = '0';
-            dropdown.style.visibility = 'hidden';
+            // Wait for fade-out before hiding
+            setTimeout(() => {
+                dropdown.style.visibility = 'hidden';
+            }, 500);
         });
     });
 }
@@ -78,13 +90,19 @@ function initLanguageDropdown() {
 
     // Show dropdown on hover (desktop)
     container.addEventListener('mouseenter', function() {
-        dropdown.style.opacity = '1';
         dropdown.style.visibility = 'visible';
+        // Use a small timeout to ensure the visibility change takes effect first
+        setTimeout(() => {
+            dropdown.style.opacity = '1';
+        }, 10);
     });
 
     container.addEventListener('mouseleave', function() {
         dropdown.style.opacity = '0';
-        dropdown.style.visibility = 'hidden';
+        // Wait for fade-out before hiding
+        setTimeout(() => {
+            dropdown.style.visibility = 'hidden';
+        }, 500);
     });
 
     // Toggle on click (all devices)
@@ -96,10 +114,16 @@ function initLanguageDropdown() {
 
         if (isVisible) {
             dropdown.style.opacity = '0';
-            dropdown.style.visibility = 'hidden';
+            // Wait for fade-out before hiding
+            setTimeout(() => {
+                dropdown.style.visibility = 'hidden';
+            }, 500);
         } else {
-            dropdown.style.opacity = '1';
             dropdown.style.visibility = 'visible';
+            // Use a small timeout to ensure the visibility change takes effect first
+            setTimeout(() => {
+                dropdown.style.opacity = '1';
+            }, 10);
         }
     });
 
@@ -111,17 +135,26 @@ function initLanguageDropdown() {
 
         if (isVisible) {
             dropdown.style.opacity = '0';
-            dropdown.style.visibility = 'hidden';
+            // Wait for fade-out before hiding
+            setTimeout(() => {
+                dropdown.style.visibility = 'hidden';
+            }, 500);
         } else {
-            dropdown.style.opacity = '1';
             dropdown.style.visibility = 'visible';
+            // Use a small timeout to ensure the visibility change takes effect first
+            setTimeout(() => {
+                dropdown.style.opacity = '1';
+            }, 10);
         }
     }, { passive: false });
 
     // Close dropdown when clicking elsewhere
     document.addEventListener('click', function() {
         dropdown.style.opacity = '0';
-        dropdown.style.visibility = 'hidden';
+        // Wait for fade-out before hiding
+        setTimeout(() => {
+            dropdown.style.visibility = 'hidden';
+        }, 500);
     });
 }
 

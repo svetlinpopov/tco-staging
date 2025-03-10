@@ -235,7 +235,7 @@ function initHeaderBackgroundTransition() {
     function updateHeaderBackground() {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
         const maxScroll = 100; // Adjust this value to control how quickly the transition happens
-        const headerInner = header.querySelector('div');
+        const headerInner = header.querySelector('.header-padding'); // Target the element with header-padding class
 
         // Get computed value of CSS variable
         const style = getComputedStyle(document.documentElement);

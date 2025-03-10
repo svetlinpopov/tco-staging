@@ -24,7 +24,8 @@
     z-index: 50;
     min-width: 160px;
     white-space: nowrap;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Slower fade in/out effect */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -42,7 +43,7 @@
 /* Basic link styling for dropdown items */
 .language-dropdown a, .nav-dropdown a {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px; /* Reduced from 16px to 14px (2px smaller) */
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
@@ -55,20 +56,20 @@
 }
 
 /* Bullet point span */
-.language-dropdown .bullet-point, .nav-dropdown .bullet-point {
+.bullet-point {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: 10px;
     color: var(--color-charcoal);
 }
 
-/* Text span with animated underline */
-.language-dropdown .locale-text, .nav-dropdown .locale-text {
+/* Text span styling - same styling method as the main nav items */
+.locale-text {
     display: inline-block;
     position: relative;
 }
 
-/* Add animated underline using pseudo-element */
-.language-dropdown .locale-text::after, .nav-dropdown .locale-text::after {
+/* Using the same underline technique as main nav items */
+.locale-text::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -80,8 +81,10 @@
     transition: opacity 0.3s ease;
 }
 
-/* Show underline on hover */
-.language-dropdown a:hover .locale-text::after, .nav-dropdown a:hover .locale-text::after {
+/* Show underline on hover - using the same method as main nav */
+.language-dropdown a:hover .locale-text::after,
+.nav-dropdown a:hover .locale-text::after,
+.nav-lang-item:hover .locale-text::after {
     opacity: 1;
 }
 
