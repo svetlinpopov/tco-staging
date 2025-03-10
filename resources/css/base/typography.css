@@ -1,0 +1,34 @@
+/**
+ * Typography
+ * Font definitions and basic text styling
+ */
+
+/* Inter Tight Font Face Declarations - Only specific weights needed */
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('../../fonts/inter-tight/static/InterTight-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('../../fonts/inter-tight/static/InterTight-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('../../fonts/inter-tight/static/InterTight-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font variables */
+@theme {
+    --font-sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}

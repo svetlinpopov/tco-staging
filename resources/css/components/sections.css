@@ -1,0 +1,70 @@
+/**
+ * Section Styles
+ * Styles for page sections and content containers
+ */
+
+/* Basic section styling */
+.section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+/* Section content container */
+.section-container {
+    max-width: 80rem; /* 1280px */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 4rem 1rem;
+}
+
+/* Section background colors */
+.section-pale {
+    background-color: var(--color-pale-slate);
+}
+
+.section-light {
+    background-color: var(--color-black-haze);
+}
+
+.section-white {
+    background-color: white;
+}
+
+/* Section headings */
+.section-heading {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .section-heading {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+}
+
+/* Section text */
+.section-text {
+    max-width: 65ch;
+    margin-bottom: 2rem;
+}
+
+/* Responsive section padding */
+@media (min-width: 768px) {
+    .section-container {
+        padding: 5rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-container {
+        padding: 6rem 2rem;
+    }
+}

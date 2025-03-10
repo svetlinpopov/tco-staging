@@ -1,0 +1,43 @@
+/**
+ * Color variables
+ * Centralized color definitions for consistent theming
+ */
+
+ @theme {
+    /* Brand Colors */
+    --color-del-rio: #b3998a;
+    --color-pale-slate: #ccc3bc;
+    --color-black-haze: #e4e0d5;
+    --color-milky: #f1eae6;
+    --color-azureish-white: #D9E3FB;
+
+    /* UI Colors */
+    --color-blue-yankees: #242B3C;
+    --color-charcoal: #3E4659;
+    --color-tco-black: #06070B;
+
+    /* State Colors */
+    --color-disabled: rgba(62, 70, 89, 0.4);
+    --color-hover-overlay: rgba(255, 255, 255, 0.2);
+
+    /* Text Colors */
+    --color-text-primary: #242B3C;
+    --color-text-light: #FFFFFF;
+
+    /* Overlay Colors */
+    --color-overlay-light: rgba(255, 255, 255, 0.95);
+    --color-overlay-dark: rgba(36, 43, 60, 0.9);
+}
+
+/* Helper classes for backgrounds */
+.bg-del-rio {
+    background-color: var(--color-del-rio);
+}
+
+.bg-pale-slate {
+    background-color: var(--color-pale-slate);
+}
+
+.bg-black-haze {
+    background-color: var(--color-black-haze);
+}
