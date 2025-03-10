@@ -7,4 +7,6 @@ return [
     'about' => 'Sobre Nosotros',
     'contact' => 'Contáctenos',
     'ctamatched' => 'Encontrar Pareja',
+    'therapist_list' => 'Lista de Terapeutas',
+    'group_therapy' => 'Sesiones de Terapia Grupal',
 ];

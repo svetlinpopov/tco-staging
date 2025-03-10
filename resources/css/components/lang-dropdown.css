@@ -2,17 +2,28 @@
  * Language Dropdown Styles
  * Import this file in app.css
  */
- .language-dropdown-container {
+ .language-dropdown-container, .relative {
     position: relative;
 }
 
-.language-dropdown {
+.language-dropdown-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px; /* Buffer zone */
+    bottom: -16px;
+    z-index: 10;
+}
+
+.language-dropdown, .nav-dropdown {
     position: absolute;
     right: 0;
     top: 100%;
     margin-top: 0.5rem;
     z-index: 50;
-    min-width: 160px; /* Increased from 120px to fit longer language names */
+    min-width: 160px;
+    white-space: nowrap;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -20,8 +31,16 @@
     border-radius: 0.375rem;
 }
 
+/* Nav dropdown specific positioning */
+.nav-dropdown {
+    left: 0;
+    right: auto;
+    min-width: 220px; /* Wider to accommodate longer menu items */
+    width: auto;
+}
+
 /* Basic link styling for dropdown items */
-.language-dropdown a {
+.language-dropdown a, .nav-dropdown a {
     font-weight: 400;
     font-size: 16px;
     transition: all 0.2s ease;
@@ -32,23 +51,24 @@
     color: var(--color-charcoal);
     padding: 0.5rem 1rem;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 /* Bullet point span */
-.language-dropdown .bullet-point {
+.language-dropdown .bullet-point, .nav-dropdown .bullet-point {
     display: inline-block;
     margin-right: 0.5rem;
     color: var(--color-charcoal);
 }
 
 /* Text span with animated underline */
-.language-dropdown .locale-text {
+.language-dropdown .locale-text, .nav-dropdown .locale-text {
     display: inline-block;
     position: relative;
 }
 
 /* Add animated underline using pseudo-element */
-.language-dropdown .locale-text::after {
+.language-dropdown .locale-text::after, .nav-dropdown .locale-text::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -61,21 +81,21 @@
 }
 
 /* Show underline on hover */
-.language-dropdown a:hover .locale-text::after {
+.language-dropdown a:hover .locale-text::after, .nav-dropdown a:hover .locale-text::after {
     opacity: 1;
 }
 
-.language-dropdown a:first-child {
+.language-dropdown a:first-child, .nav-dropdown a:first-child {
     border-top-left-radius: 0.375rem;
     border-top-right-radius: 0.375rem;
 }
 
-.language-dropdown a:last-child {
+.language-dropdown a:last-child, .nav-dropdown a:last-child {
     border-bottom-left-radius: 0.375rem;
     border-bottom-right-radius: 0.375rem;
 }
 
-.language-dropdown a:hover {
+.language-dropdown a:hover, .nav-dropdown a:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -96,4 +116,9 @@
     display: flex;
     align-items: center;
     color: var(--color-charcoal);
+}
+
+/* Nav dropdown trigger styles */
+.nav-dropdown-trigger {
+    cursor: pointer;
 }

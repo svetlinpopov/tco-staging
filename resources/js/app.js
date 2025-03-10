@@ -11,13 +11,10 @@ function initializeAll() {
     // Initialize side navigation dots
     initSideNavigation();
 
-    // Initialize mobile menu
-    initMobileMenu();
-
     // Initialize header background transition on scroll
     initHeaderBackgroundTransition();
 
-    // Initalize nav-links pressed effect
+    // Initialize nav-links pressed effect
     initNavLinks();
 }
 
@@ -39,7 +36,7 @@ document.addEventListener('livewire:init', () => {
  * Initialize Navigation Link active states
  */
 function initNavLinks() {
-    const navLinks = document.querySelectorAll('.nav-item');
+    const navLinks = document.querySelectorAll('.nav-item:not(.nav-dropdown-trigger)');
 
     navLinks.forEach(link => {
         // Handle mousedown for active state
@@ -56,6 +53,15 @@ function initNavLinks() {
         link.addEventListener('mouseout', function() {
             this.classList.remove('is-pressed');
         });
+
+        // Handle touch events
+        link.addEventListener('touchstart', function() {
+            this.classList.add('is-pressed');
+        }, { passive: true });
+
+        link.addEventListener('touchend', function() {
+            this.classList.remove('is-pressed');
+        }, { passive: true });
     });
 }
 
@@ -203,10 +209,17 @@ function initMobileMenu() {
 
     if (!menuButton || !mobileMenu) return;
 
-    // Toggle mobile menu
-    menuButton.addEventListener('click', function() {
+    // Traditional click handler
+    menuButton.addEventListener('click', function(e) {
+        e.preventDefault();
         mobileMenu.classList.toggle('hidden');
     });
+
+    // Touch handler for mobile
+    menuButton.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        mobileMenu.classList.toggle('hidden');
+    }, { passive: false });
 }
 
 /**
