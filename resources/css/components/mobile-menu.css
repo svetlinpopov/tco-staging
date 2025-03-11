@@ -1,52 +1,51 @@
-/**
+/* Mobile nav link styling */
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 0;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.mobile-nav-link:hover {
+    transform: translateX(10px);
+}
+
+.mobile-nav-link.active {
+    font-weight: 500;
+}/**
  * Mobile Menu styles
- * Simplified to avoid conflicts with JavaScript dropdown handling
+ * Simple, reliable implementation
  */
 
-/* Mobile menu container */
-.mobile-menu-container {
-    position: relative;
-    width: 100%;
+/* Mobile Menu */
+#mobile-menu {
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }
 
-/* Hide mobile menu by default */
-.mobile-menu {
-    display: none;
+#mobile-menu.menu-open {
+    opacity: 1;
 }
 
-/* Show mobile menu when checkbox is checked */
-#mobile-menu-toggle:checked ~ .mobile-menu {
-    display: block;
+/* Keep consistent height for language switcher and menu toggle */
+.btn-lang-selector {
+    height: 35px !important;
+    min-height: 35px !important;
 }
 
-/* Dropdown toggle styles */
-.dropdown-toggle {
-    display: none;
+/* Keep menu button white */
+#mobile-menu-button,
+#mobile-menu-button:hover,
+#mobile-menu-button:active,
+#mobile-menu-button:focus {
+    color: white !important;
+    border-color: white !important;
 }
 
-/* Basic dropdown style - visibility controlled via JS */
-.dropdown-menu {
-    margin-top: 0.5rem;
-}
-
-/* IMPORTANT: No CSS-based hover or visibility behavior for dropdowns */
-
-/* Target touch areas for mobile */
-@media (max-width: 1023px) {
-    label[for="mobile-menu-toggle"],
-    label[for="language-dropdown"],
-    .dropdown-wrapper label {
-        min-height: 44px;
-        min-width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Add vertical padding for touch area */
-    .dropdown-menu a,
-    .nav-lang-item {
-        padding-top: 12px;
-        padding-bottom: 12px;
+/* Extra hiding for mobile menu button on large screens */
+@media (min-width: 1024px) {
+    #mobile-menu-button {
+        display: none !important;
     }
 }

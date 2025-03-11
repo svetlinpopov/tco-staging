@@ -20,6 +20,8 @@ header {
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 /* Responsive backgrounds */

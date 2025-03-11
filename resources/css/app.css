@@ -23,9 +23,10 @@
 @source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
-/* Set the font-family for the body */
+/* Set the font-family and background for the body */
 body {
     font-family: var(--font-sans);
+    background-color: var(--color-black-haze);
 }
 
 /**

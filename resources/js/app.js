@@ -7,10 +7,10 @@ import.meta.glob([
 ]);
 
 // Import modules
-import { initSideNavigation } from './modules/side-navigation';
 import { initHeaderEffects } from './modules/header-effects';
 import { initNavigation } from './modules/navigation';
 import { initDropdowns } from './modules/dropdowns';
+import { initMenuToggle } from './modules/menu-toggle';
 import { enableDiagnostics, disableDiagnostics } from './utils/helpers';
 
 /**
@@ -19,14 +19,14 @@ import { enableDiagnostics, disableDiagnostics } from './utils/helpers';
  * and is called on initial page load and navigation
  */
 function initializeAll() {
-    // Initialize side navigation dots
-    initSideNavigation();
-
     // Initialize header background transition on scroll
     initHeaderEffects();
 
     // Initialize navigation functionality
     initNavigation();
+
+    // Initialize mobile menu toggle
+    initMenuToggle();
 
     // Initialize dropdown menus - this needs to run last
     initDropdowns();

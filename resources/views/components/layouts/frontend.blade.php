@@ -5,7 +5,7 @@
 <head>
     @include('partials.head', ['title' => $title])
 </head>
-<body class="font-sans antialiased min-h-screen bg-white">
+<body class="font-sans antialiased min-h-screen">
     <!-- Explicitly using an outer container with normal overflow behavior -->
     <div class="flex min-h-screen w-full flex-col">
         <!-- Include the header as an overlay -->
