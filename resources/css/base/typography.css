@@ -3,32 +3,327 @@
  * Font definitions and basic text styling
  */
 
-/* Inter Tight Font Face Declarations - Only specific weights needed */
+/* Inter Tight Variable Font - Covers all weights in a single file */
 @font-face {
     font-family: 'Inter Tight';
-    src: url('../../fonts/inter-tight/static/InterTight-Regular.ttf') format('truetype');
-    font-weight: 400;
+    src: url('../../fonts/inter-tight/InterTight-VariableFont_wght.ttf') format('woff2-variations');
+    font-weight: 100 900; /* This range covers all weights from Thin to Black */
     font-style: normal;
     font-display: swap;
 }
 
+/* Inter Tight Variable Font Italic - Covers all italic weights */
 @font-face {
     font-family: 'Inter Tight';
-    src: url('../../fonts/inter-tight/static/InterTight-ExtraLightItalic.ttf') format('truetype');
-    font-weight: 200;
+    src: url('../../fonts/inter-tight/InterTight-Italic-VariableFont_wght.ttf') format('woff2-variations');
+    font-weight: 100 900;
     font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter Tight';
-    src: url('../../fonts/inter-tight/static/InterTight-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
     font-display: swap;
 }
 
 /* Font variables */
 @theme {
     --font-sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/**
+ * Typography Utility Classes
+ * Based on design system specifications
+ */
+
+/* Font weight utility classes */
+.font-extra-light {
+    font-weight: 200;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+/**
+ * Desktop Typography Styles (Default)
+ * Responsive styles will override these at smaller viewports
+ */
+
+/* Headlines - Desktop */
+.headline-1 {
+    font-family: var(--font-sans);
+    font-weight: 700; /* Bold */
+    font-size: 116px;
+    line-height: 1.21;
+    letter-spacing: 0.01em; /* 1% */
+}
+
+.headline-1-light-italic {
+    font-family: var(--font-sans);
+    font-weight: 200; /* Extra Light */
+    font-style: italic;
+    font-size: 116px;
+    line-height: 1.21;
+    letter-spacing: -0.03em; /* -3% */
+}
+
+.headline-2 {
+    font-family: var(--font-sans);
+    font-weight: 400; /* Regular */
+    font-size: 56px;
+    line-height: 1.21;
+    letter-spacing: 0; /* 0% */
+}
+
+.headline-2-light-italic {
+    font-family: var(--font-sans);
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 56px;
+    line-height: 1.21;
+    letter-spacing: 0; /* 0% */
+}
+
+.headline-3 {
+    font-family: var(--font-sans);
+    font-weight: 400; /* Regular */
+    font-size: 48px;
+    line-height: 0.96;
+    letter-spacing: 0; /* 0% */
+}
+
+.headline-3-light-italic {
+    font-family: var(--font-sans);
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 48px;
+    line-height: 0.96;
+    letter-spacing: 0; /* 0% */
+}
+
+/* Body Text - Desktop */
+.body-24 {
+    font-family: var(--font-sans);
+    font-weight: 400; /* Regular */
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+.body-24-medium {
+    font-family: var(--font-sans);
+    font-weight: 500; /* Medium */
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+.body-18 {
+    font-family: var(--font-sans);
+    font-weight: 400; /* Regular */
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+.body-18-semibold {
+    font-family: var(--font-sans);
+    font-weight: 600; /* Semibold */
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+.body-16 {
+    font-family: var(--font-sans);
+    font-weight: 400; /* Regular */
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+.body-16-semibold {
+    font-family: var(--font-sans);
+    font-weight: 600; /* Semibold */
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+.body-16-italic {
+    font-family: var(--font-sans);
+    font-weight: 400; /* Regular */
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.21;
+    letter-spacing: 0; /* 0% */
+}
+
+.body-16-light-italic {
+    font-family: var(--font-sans);
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+/* Tags - Desktop */
+.tag-14 {
+    font-family: var(--font-sans);
+    font-weight: 400; /* Regular */
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0; /* 0% */
+}
+
+.tag-12 {
+    font-family: var(--font-sans);
+    font-weight: 600; /* Semibold */
+    font-size: 12px;
+    line-height: 1.21;
+    letter-spacing: 0; /* 0% */
+}
+
+/* Numbers - Desktop */
+.number-64 {
+    font-family: var(--font-sans);
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 64px;
+    line-height: 1.21;
+    letter-spacing: 0; /* 0% */
+}
+
+.number-24 {
+    font-family: var(--font-sans);
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0; /* 0% */
+}
+
+/**
+ * Mobile Typography Styles
+ * Override desktop styles for smaller screens
+ */
+@media (max-width: 767px) {
+    /* Headlines - Mobile */
+    .headline-1 {
+        font-weight: 400; /* Regular */
+        font-size: 56px;
+        line-height: 1.21;
+        letter-spacing: 0.01em; /* 1% */
+    }
+
+    .headline-1-light-italic {
+        font-size: 56px;
+        line-height: 1.21;
+        letter-spacing: -0.03em; /* -3% */
+    }
+
+    .headline-2 {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .headline-2-light-italic {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .headline-3 {
+        font-size: 36px;
+        line-height: 0.96;
+    }
+
+    .headline-3-light-italic {
+        font-size: 36px;
+        line-height: 0.96;
+    }
+
+    /* Numbers - Mobile */
+    .number-64 {
+        font-size: 40px;
+        line-height: 0.96;
+    }
+
+    /* Additional Mobile Number Styles */
+    .number-56 {
+        font-family: var(--font-sans);
+        font-weight: 300; /* Light */
+        font-style: italic;
+        font-size: 56px;
+        line-height: 1.21;
+        letter-spacing: 0; /* 0% */
+    }
+}
+
+/**
+ * HTML Element Defaults
+ * For semantic HTML elements
+ */
+h1 {
+    /* Maps to headline-1 */
+    font-weight: 700;
+    font-size: 116px;
+    line-height: 1.21;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    /* Maps to headline-2 */
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.21;
+    letter-spacing: 0;
+}
+
+h3 {
+    /* Maps to headline-3 */
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 0.96;
+    letter-spacing: 0;
+}
+
+p {
+    /* Maps to body-16 */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-weight: 400;
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
 }
