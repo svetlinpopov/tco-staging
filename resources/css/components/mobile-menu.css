@@ -1,78 +1,52 @@
 /**
- * Mobile Menu and Dropdown styles using CSS-only approach
+ * Mobile Menu styles
+ * Simplified to avoid conflicts with JavaScript dropdown handling
  */
 
 /* Mobile menu container */
 .mobile-menu-container {
     position: relative;
     width: 100%;
-  }
+}
 
-  /* Hide mobile menu by default */
-  .mobile-menu {
+/* Hide mobile menu by default */
+.mobile-menu {
     display: none;
-  }
+}
 
-  /* Show mobile menu when checkbox is checked */
-  #mobile-menu-toggle:checked ~ .mobile-menu {
+/* Show mobile menu when checkbox is checked */
+#mobile-menu-toggle:checked ~ .mobile-menu {
     display: block;
-  }
+}
 
-  /* Dropdown toggle and menu */
+/* Dropdown toggle styles */
 .dropdown-toggle {
     display: none;
-  }
+}
 
-  .dropdown-menu {
-    display: none;
+/* Basic dropdown style - visibility controlled via JS */
+.dropdown-menu {
     margin-top: 0.5rem;
-  }
+}
 
-  /* Add hover buffer zone */
-  .dropdown-wrapper {
-    position: relative;
-  }
+/* IMPORTANT: No CSS-based hover or visibility behavior for dropdowns */
 
-  .dropdown-wrapper::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 20px; /* Create invisible buffer between menu item and dropdown */
-    bottom: -16px;
-    z-index: 10;
-  }
-
-  /* Show dropdown menu when hover on desktop */
-  @media (min-width: 1024px) {
-    .dropdown-wrapper:hover .dropdown-menu,
-    .dropdown-wrapper:hover::after,
-    .dropdown-menu:hover {
-      display: block;
-    }
-  }
-
-  /* Show dropdown menu when checkbox is checked (for mobile) */
-  .dropdown-toggle:checked ~ .dropdown-menu {
-    display: block;
-  }
-
-  /* Target touch areas for mobile */
-  @media (max-width: 1023px) {
+/* Target touch areas for mobile */
+@media (max-width: 1023px) {
     label[for="mobile-menu-toggle"],
     label[for="language-dropdown"],
     .dropdown-wrapper label {
-      min-height: 44px;
-      min-width: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Add vertical padding for touch area */
     .dropdown-menu a,
     .nav-lang-item {
-      padding-top: 12px;
-      padding-bottom: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
-  }
+}

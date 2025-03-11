@@ -11,6 +11,10 @@ import { initSideNavigation } from './modules/side-navigation';
 import { initHeaderEffects } from './modules/header-effects';
 import { initNavigation } from './modules/navigation';
 import { initDropdowns } from './modules/dropdowns';
+import { enableDiagnostics, disableDiagnostics } from './utils/helpers';
+
+// Enable/disable JS diagnostics
+enableDiagnostics({dropdowns: true, navigation: true, events: true, verbose: true});
 
 // Initialize all functionality
 function initializeAll() {
@@ -23,7 +27,7 @@ function initializeAll() {
     // Initialize navigation functionality
     initNavigation();
 
-    // Initialize dropdown menus
+    // Initialize dropdown menus - this needs to run last
     initDropdowns();
 }
 
@@ -36,4 +40,10 @@ document.addEventListener('livewire:init', () => {
     Livewire.on('language-changed', () => {
         initializeAll();
     });
+});
+
+// Wait for DOM and run diagnostics
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait 1 second for everything to initialize
+    setTimeout(diagDropdowns, 1000);
 });

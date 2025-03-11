@@ -1,189 +1,204 @@
 /**
- * Dropdowns Module
- * Handles all dropdown menus consistently
+ * Dropdowns Module - With Hover and Click Functionality
+ * Supports both hover and click interactions with smooth transitions
  */
 
 // Animation constants
 const FADE_DURATION = 300; // in milliseconds
-const VISIBILITY_DELAY = 10; // small delay for visibility change
-const HOVER_DELAY = 100; // delay before showing dropdown on hover
-const HIDE_DELAY = 300; // delay before hiding dropdown on mouse leave
+const HOVER_DELAY = 150; // delay before showing dropdown on hover
+const HOVER_OUT_DELAY = 300; // delay before hiding dropdown on mouse leave
 
 /**
  * Initialize all dropdown functionality
  */
 export function initDropdowns() {
-    const dropdownContainers = document.querySelectorAll('.dropdown-container, .language-dropdown-container, .nav-dropdown-container');
+    // First, let's add CSS for smooth transitions
+    const style = document.createElement('style');
+    style.textContent = `
+        .dropdown-menu, .language-dropdown, .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity ${FADE_DURATION}ms ease;
+        }
 
-    if (!dropdownContainers.length) return;
+        .dropdown-visible {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
 
-    // Track currently open dropdown on mobile
+        .dropdown-hiding {
+            opacity: 0 !important;
+            visibility: visible !important;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Track state
     let openDropdown = null;
-    // Store timeout IDs for hover delays
-    let hoverTimeouts = {};
-    let hideTimeouts = {};
+    let openTrigger = null;
+    let openByClick = false; // Whether the current dropdown was opened by click
 
-    // Check if we're on desktop
-    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+    // Hover timers
+    let hoverInTimer = null;
+    let hoverOutTimer = null;
 
-    dropdownContainers.forEach(container => {
+    // Process all dropdown containers
+    const containers = document.querySelectorAll('.dropdown-container, .language-dropdown-container, .nav-dropdown-container');
+
+    containers.forEach(container => {
         const trigger = container.querySelector('.dropdown-toggle-label, .btn-lang-selector, .nav-dropdown-trigger, .nav-item');
         const dropdown = container.querySelector('.dropdown-menu, .language-dropdown, .nav-dropdown');
 
         if (!trigger || !dropdown) return;
 
-        if (isDesktop) {
-            // Desktop - use hover
-            setupDesktopHoverEvents(container, trigger, dropdown, hoverTimeouts, hideTimeouts);
-        } else {
-            // Mobile - use click events
-            setupMobileClickEvents(container, trigger, dropdown, openDropdown);
-        }
-    });
+        // Handle hover interactions
+        container.addEventListener('mouseenter', () => {
+            // Clear any pending hide timer
+            if (hoverOutTimer) {
+                clearTimeout(hoverOutTimer);
+                hoverOutTimer = null;
+            }
 
-    // Close all dropdowns when clicking outside on mobile
-    if (!isDesktop) {
-        document.addEventListener('click', () => {
-            const visibleDropdowns = document.querySelectorAll('.dropdown-menu[style*="visible"], .language-dropdown[style*="visible"], .nav-dropdown[style*="visible"]');
+            // Don't interfere if a dropdown is open via click
+            if (openDropdown === dropdown && openByClick) {
+                return;
+            }
 
-            visibleDropdowns.forEach(dropdown => {
-                hideDropdown(dropdown);
-            });
+            // Set a short delay before showing
+            hoverInTimer = setTimeout(() => {
+                // If another dropdown is currently open by click, don't change it
+                if (openDropdown && openDropdown !== dropdown && openByClick) {
+                    return;
+                }
 
-            openDropdown = null;
+                // If another dropdown is open by hover, close it
+                if (openDropdown && openDropdown !== dropdown) {
+                    fadeOutDropdown(openDropdown);
+                }
+
+                // Open this dropdown
+                fadeInDropdown(dropdown);
+                openDropdown = dropdown;
+                openTrigger = trigger;
+                openByClick = false;
+            }, HOVER_DELAY);
         });
-    }
 
-    // Handle window resize - reinitialize dropdown behavior
-    window.addEventListener('resize', debounce(() => {
-        // Clean up existing event listeners
-        // Since we can't easily remove anonymous listeners, we'll reinitialize the module
-        initDropdowns();
-    }, 250));
-}
+        container.addEventListener('mouseleave', () => {
+            // Clear any pending show timer
+            if (hoverInTimer) {
+                clearTimeout(hoverInTimer);
+                hoverInTimer = null;
+            }
 
-/**
- * Setup desktop hover events for dropdown
- */
-function setupDesktopHoverEvents(container, trigger, dropdown, hoverTimeouts, hideTimeouts) {
-    const containerId = container.id || generateId();
+            // Don't hide if opened by click
+            if (openDropdown === dropdown && openByClick) {
+                return;
+            }
 
-    // Mouse enter container - show dropdown
-    container.addEventListener('mouseenter', () => {
-        // Clear any pending hide timeout
-        if (hideTimeouts[containerId]) {
-            clearTimeout(hideTimeouts[containerId]);
-            delete hideTimeouts[containerId];
-        }
+            // Set delay before hiding
+            hoverOutTimer = setTimeout(() => {
+                if (openDropdown === dropdown && !openByClick) {
+                    fadeOutDropdown(dropdown);
+                    openDropdown = null;
+                    openTrigger = null;
+                }
+            }, HOVER_OUT_DELAY);
+        });
 
-        // Set delay before showing
-        hoverTimeouts[containerId] = setTimeout(() => {
-            showDropdown(dropdown);
-        }, HOVER_DELAY);
+        // Handle click interactions
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Clear any pending timers
+            if (hoverInTimer) {
+                clearTimeout(hoverInTimer);
+                hoverInTimer = null;
+            }
+
+            if (hoverOutTimer) {
+                clearTimeout(hoverOutTimer);
+                hoverOutTimer = null;
+            }
+
+            // Toggle dropdown based on current state
+            if (openDropdown === dropdown) {
+                // If already open, close it
+                fadeOutDropdown(dropdown);
+                openDropdown = null;
+                openTrigger = null;
+                openByClick = false;
+            } else {
+                // If another dropdown is open, close it
+                if (openDropdown) {
+                    fadeOutDropdown(openDropdown);
+                }
+
+                // Open this dropdown
+                fadeInDropdown(dropdown);
+                openDropdown = dropdown;
+                openTrigger = trigger;
+                openByClick = true; // Mark as opened by click
+            }
+        });
+
+        // Stop event propagation inside dropdown
+        dropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            // If clicked on a link, close after a short delay
+            if (e.target.tagName === 'A' || e.target.closest('a')) {
+                setTimeout(() => {
+                    fadeOutDropdown(dropdown);
+                    if (openDropdown === dropdown) {
+                        openDropdown = null;
+                        openTrigger = null;
+                        openByClick = false;
+                    }
+                }, 100);
+            }
+        });
     });
 
-    // Mouse leave container - hide dropdown with delay
-    container.addEventListener('mouseleave', () => {
-        // Clear any pending show timeout
-        if (hoverTimeouts[containerId]) {
-            clearTimeout(hoverTimeouts[containerId]);
-            delete hoverTimeouts[containerId];
+    // Handle document clicks to close clicked-open dropdown
+    document.addEventListener('click', function(e) {
+        // If no dropdown is open or the click was inside the open dropdown, do nothing
+        if (!openDropdown || openDropdown.contains(e.target) || (openTrigger && openTrigger.contains(e.target))) {
+            return;
         }
 
-        // Set delay before hiding
-        hideTimeouts[containerId] = setTimeout(() => {
-            hideDropdown(dropdown);
-        }, HIDE_DELAY);
-    });
-
-    // Handle touch events for mobile even in desktop mode
-    trigger.addEventListener('touchend', (e) => {
-        e.preventDefault(); // Prevent ghost clicks
-        e.stopPropagation();
-
-        const isVisible = dropdown.style.visibility === 'visible';
-
-        if (isVisible) {
-            hideDropdown(dropdown);
-        } else {
-            showDropdown(dropdown);
-        }
-    }, { passive: false });
-}
-
-/**
- * Setup mobile click events for dropdown
- */
-function setupMobileClickEvents(container, trigger, dropdown, openDropdown) {
-    // Handle click for mobile
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const isVisible = dropdown.style.visibility === 'visible';
-
-        // Handle other open dropdowns
-        if (openDropdown && openDropdown !== dropdown) {
-            hideDropdown(openDropdown);
-        }
-
-        if (isVisible) {
-            hideDropdown(dropdown);
+        // Only close if it was opened by click
+        if (openByClick) {
+            fadeOutDropdown(openDropdown);
             openDropdown = null;
-        } else {
-            showDropdown(dropdown);
-            openDropdown = dropdown;
+            openTrigger = null;
+            openByClick = false;
         }
     });
 
-    // Touch event handling
-    trigger.addEventListener('touchend', (e) => {
-        e.preventDefault(); // Prevent ghost clicks
-    }, { passive: false });
+    // Force disable any existing checkbox toggles to prevent conflicts
+    document.querySelectorAll('input[type="checkbox"].dropdown-toggle').forEach(checkbox => {
+        checkbox.disabled = true;
+    });
 }
 
 /**
- * Show dropdown with animation
+ * Fade in a dropdown with smooth animation
  */
-function showDropdown(dropdown) {
-    // Reset any ongoing transitions
-    dropdown.style.transition = `opacity ${FADE_DURATION}ms ease, visibility 0s linear ${VISIBILITY_DELAY}ms`;
-    dropdown.style.visibility = 'visible';
-
-    // Small delay ensures visibility change takes effect first
-    setTimeout(() => {
-        dropdown.style.opacity = '1';
-    }, VISIBILITY_DELAY);
+function fadeInDropdown(dropdown) {
+    dropdown.classList.remove('dropdown-hiding');
+    dropdown.classList.add('dropdown-visible');
 }
 
 /**
- * Hide dropdown with animation
+ * Fade out a dropdown with smooth animation
  */
-function hideDropdown(dropdown) {
-    // Reset any ongoing transitions
-    dropdown.style.transition = `opacity ${FADE_DURATION}ms ease, visibility 0s linear ${FADE_DURATION}ms`;
-    dropdown.style.opacity = '0';
+function fadeOutDropdown(dropdown) {
+    dropdown.classList.remove('dropdown-visible');
+    dropdown.classList.add('dropdown-hiding');
 
-    // Wait for fade-out animation to complete
     setTimeout(() => {
-        dropdown.style.visibility = 'hidden';
+        dropdown.classList.remove('dropdown-hiding');
     }, FADE_DURATION);
-}
-
-/**
- * Generate a random ID for elements
- */
-function generateId() {
-    return 'dropdown-' + Math.random().toString(36).substring(2, 9);
-}
-
-/**
- * Debounce function to limit frequency of calls
- */
-function debounce(func, wait = 20) {
-    let timeout;
-    return function(...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), wait);
-    };
 }
