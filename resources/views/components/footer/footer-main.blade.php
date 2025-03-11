@@ -4,49 +4,54 @@
             <!-- Company Info -->
             <div class="space-y-4">
                 <a href="/" class="flex items-center space-x-2">
-                    AppLogo
+                    <!-- Apply a filter to make the white logo Yankees Blue (#242B3C) -->
+                    <img src="{{ Vite::asset('resources/img/tco-logo.svg') }}"
+                         alt="Therapetico Logo"
+                         class="h-[25px] w-auto"
+                         style="filter: brightness(0) saturate(100%) invert(17%) sepia(18%) saturate(1080%) hue-rotate(188deg) brightness(96%) contrast(87%);">
                 </a>
-                <p class="text-sm text-zinc-600 max-w-xs">
-                    Your company description here.
+                <p style="font-size: 12px;" class="text-zinc-600 max-w-xs">
+                    Therapetico connects clients with the right therapists, making mental health support accessible to everyone.
                 </p>
             </div>
 
             <!-- Links 1 -->
             <div>
-                <h3 class="font-semibold text-zinc-900 mb-4">Product</h3>
+                <h3 style="font-size: 18px;" class="font-semibold text-zinc-900 mb-4">For Clients</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Features</a></li>
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Pricing</a></li>
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Testimonials</a></li>
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">FAQ</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Find a Therapist</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Group Therapy</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Therapy Approaches</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Insurance Coverage</a></li>
                 </ul>
             </div>
 
             <!-- Links 2 -->
             <div>
-                <h3 class="font-semibold text-zinc-900 mb-4">Company</h3>
+                <h3 style="font-size: 18px;" class="font-semibold text-zinc-900 mb-4">For Therapists</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">About</a></li>
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Team</a></li>
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Careers</a></li>
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Contact</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Join Our Network</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Therapist Resources</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Business Tools</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Professional Development</a></li>
                 </ul>
             </div>
 
             <!-- Links 3 -->
             <div>
-                <h3 class="font-semibold text-zinc-900 mb-4">Legal</h3>
+                <h3 style="font-size: 18px;" class="font-semibold text-zinc-900 mb-4">Company</h3>
                 <ul class="space-y-2">
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">About Us</a></li>
+                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Our Mission</a></li>
                     <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Privacy Policy</a></li>
                     <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Terms of Service</a></li>
-                    <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-900">Cookie Policy</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="border-t border-zinc-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm text-zinc-600">
-                &copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. All rights reserved.
+            <p style="font-size: 12px;" class="text-zinc-600">
+                &copy; {{ date('Y') }} Therapetico. All rights reserved.
             </p>
 
             <div class="flex space-x-6 mt-4 md:mt-0">
@@ -69,9 +74,9 @@
                     </svg>
                 </a>
                 <a href="#" class="text-zinc-600 hover:text-zinc-900">
-                    <span class="sr-only">GitHub</span>
+                    <span class="sr-only">LinkedIn</span>
                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                 </a>
             </div>

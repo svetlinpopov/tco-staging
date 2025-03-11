@@ -2,10 +2,19 @@
     @include('components.side-navigation')
 
     <div class="snap-container">
-        <!-- Section-Hero -->
-        <section id="section1" class="snap-section w-full min-h-screen flex items-center justify-center border-b border-neutral-200">
-            <div class="mx-auto max-w-7xl flex items-center justify-center w-full py-16">
-                <h2 class="text-2xl md:text-4xl font-semibold">Container 1</h2>
+        <!-- Section-Hero with floating SVG -->
+        <section id="section1" class="snap-section w-full min-h-screen flex items-center justify-center border-b border-neutral-200 relative overflow-hidden">
+            <!-- Floating SVG container - sized to include enough padding for animation -->
+            <div class="absolute top-0 left-0 w-full h-full" style="padding: 80px;">
+                <div class="relative w-full h-full">
+                    <div class="floating-svg-wrapper" style="top: -40px; left: -40px; width: calc(100% + 80px); height: calc(100% + 80px);">
+                        <img src="{{ Vite::asset('resources/img/circle-lines.svg') }}" alt="" class="floating-svg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-auto max-w-7xl flex items-center justify-center w-full py-16 relative z-2">
+                <!-- Empty container - only background and floating SVG visible -->
             </div>
         </section>
 

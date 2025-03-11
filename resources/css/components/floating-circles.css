@@ -1,0 +1,84 @@
+/**
+ * Floating SVG Animation
+ *
+ * This module creates a gentle floating animation effect using an SVG graphic.
+ * The SVG maintains fixed dimensions regardless of viewport size and is positioned
+ * at a specific offset from center. The animation creates subtle movement
+ * with slight rotation to create an ambient, dreamy background effect.
+ *
+ * @author Therapetico Dev Team
+ * @version 1.0.0
+ */
+
+/**
+ * Container for the floating SVG
+ * Creates an absolute positioning context and manages overflow
+ */
+ .floating-svg-container {
+    position: absolute; /* Changed from fixed to absolute for section containment */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure clicks pass through to elements below */
+    z-index: 1;
+}
+
+/**
+ * Animation wrapper for the SVG
+ * Separates animation logic from positioning for cleaner code
+ * Ensures the animation has room to move without being clipped
+ */
+.floating-svg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: float-svg 15s linear infinite; /* Final animation duration */
+    /* Remove overflow: visible to prevent extending beyond section boundaries */
+}
+
+/**
+ * Main SVG element styling
+ * Uses multiple techniques to ensure fixed dimensions regardless of viewport size
+ * Positioned precisely with a specific offset from center
+ */
+.floating-svg {
+    position: absolute;
+    /* Force exact dimensions with multiple constraints */
+    width: 2035px !important;
+    height: 1614px !important;
+    min-width: 2035px !important; /* Prevent shrinking */
+    min-height: 1614px !important; /* Prevent shrinking */
+    max-width: none !important; /* Prevent constraints */
+    max-height: none !important; /* Prevent constraints */
+
+    /* Position exactly at the center of the screen with offset */
+    top: 50%;
+    left: 50%;
+
+    /* Transform for precise positioning, 400px right offset, and scale control */
+    transform: translate(calc(-50% + 400px), -50%) scale(1) !important;
+    transform-origin: center center !important;
+
+    /* Prevent interaction with SVG */
+    pointer-events: none;
+
+    /* Prevent browser-based image resizing */
+    object-fit: none !important;
+    object-position: center !important;
+}
+
+/**
+ * Animation keyframes for the floating effect
+ * Creates a smooth, organic movement pattern with subtle rotation
+ * Uses fixed pixel values for consistent animation regardless of viewport
+ */
+@keyframes float-svg {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(40px, 60px) rotate(1deg); }
+    50% { transform: translate(-20px, 20px) rotate(0deg); }
+    75% { transform: translate(-40px, -40px) rotate(-1deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}

@@ -17,6 +17,7 @@
 @import './components/navigation.css';
 @import './components/mobile-menu.css';
 @import './components/sections.css';
+@import './components/floating-circles.css'; /* Added floating circles component */
 
 /* Laravel and framework imports */
 @source "../views";
