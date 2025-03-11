@@ -1,4 +1,4 @@
-<div class="relative inline-block dropdown-wrapper">
+<div class="relative inline-block language-dropdown-container">
     <!-- Dropdown toggle -->
     <input type="checkbox" id="language-dropdown" class="dropdown-toggle hidden">
     <label
@@ -14,7 +14,7 @@
 
     <!-- Dropdown menu -->
     @if(count($locales) > 1)
-        <div class="dropdown-menu absolute right-0 mt-2 z-50 min-w-[160px] bg-white/95 rounded-md shadow-lg border border-white/20">
+        <div class="language-dropdown absolute right-0 mt-2 z-50 min-w-[160px] bg-white/95 rounded-md shadow-lg border border-white/20">
             <div class="py-1">
                 @foreach($locales as $locale)
                     @if($locale !== $currentLocale)

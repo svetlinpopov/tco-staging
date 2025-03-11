@@ -27,7 +27,7 @@
     z-index: 50;
     min-width: 160px;
     white-space: nowrap;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
     background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -116,28 +116,6 @@
 /* Dropdown toggle styling */
 .dropdown-toggle {
     display: none;
-}
-
-/* Show dropdown on hover for desktop */
-@media (min-width: 1024px) {
-    .dropdown-container:hover .dropdown-menu,
-    .dropdown-container:hover::after,
-    .dropdown-menu:hover,
-    .language-dropdown-container:hover .language-dropdown,
-    .language-dropdown-container:hover::after,
-    .language-dropdown:hover,
-    .nav-dropdown-container:hover .nav-dropdown,
-    .nav-dropdown-container:hover::after,
-    .nav-dropdown:hover {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
-/* Show dropdown when checkbox is checked (for mobile) */
-.dropdown-toggle:checked ~ .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
 }
 
 /* Mobile touch target areas */
