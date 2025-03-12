@@ -169,10 +169,41 @@
 /**
  * Mobile menu styles
  */
+
+/* Mobile navigation links container */
+#mobile-nav-links {
+    width: 100%;
+    margin-top: 10%; /* Static distance from top */
+}
+
+/* Style for main mobile navigation links */
+#mobile-nav-links > a.mobile-nav-link {
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    padding: 0 16px 12px 16px; /* Add horizontal padding inside the borders */
+    display: block;
+    width: 100%;
+}
+
+/* Add top border only to the first direct link */
+#mobile-nav-links > a.mobile-nav-link:first-child {
+    border-top: 1px solid white;
+    padding-top: 12px; /* Add some padding to make the top border look better */
+}
 /* Mobile Menu container */
 #mobile-menu {
     transition: opacity 0.3s ease;
     opacity: 0;
+    background-image: url('../../img/backgrounds/mobile-nav-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#mobile-menu-frame {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #mobile-menu.menu-open {
@@ -222,8 +253,8 @@
     }
 }
 
-/* Tablet screens */
-@media (min-width: 1024px) {
+/* Desktop screens (larger than 1024px) */
+@media (min-width: 1025px) {
     .main-nav {
         display: flex;
     }
@@ -238,8 +269,8 @@
     }
 }
 
-/* Mobile and below */
-@media (max-width: 1023px) {
+/* Mobile and tablet screens (1024px and below) */
+@media (max-width: 1024px) {
     .main-nav {
         display: none;
     }
@@ -256,6 +287,19 @@
         min-width: 44px;
         display: flex;
         align-items: center;
+    }
+
+    /* Override Tailwind lg: classes at exactly 1024px */
+    header .lg\:flex {
+        display: none !important;
+    }
+
+    header .lg\:block {
+        display: none !important;
+    }
+
+    header .lg\:hidden {
+        display: block !important;
     }
 }
 
