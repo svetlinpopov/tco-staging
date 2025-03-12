@@ -1,0 +1,267 @@
+/**
+ * Header Component Styles
+ * Comprehensive styles for header, navigation and mobile menu
+ */
+
+/**
+ * Core Header Styles
+ */
+ header {
+    transition: background-color 0.5s ease;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+}
+
+.header-padding {
+    transition: padding 0.5s ease;
+    width: 100%;
+    padding: 1.5rem 2rem;
+}
+
+/**
+ * Desktop Navigation
+ */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Navigation Items and Dropdowns */
+.nav-item {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    margin: 0.5rem 20px;
+    transition: all 0.2s ease;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    opacity: 1;
+}
+
+.nav-item.is-pressed {
+    color: var(--color-azureish-white);
+}
+
+.nav-item.is-pressed::after {
+    background-color: var(--color-azureish-white);
+}
+
+.nav-item:disabled,
+.nav-item.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/**
+ * Header-specific Buttons
+ */
+/* Header Button */
+.btn-header {
+    background-color: white;
+    color: var(--color-charcoal);
+    border-radius: 9999px;
+    font-weight: 600;
+}
+
+.btn-header:hover {
+    background-color: var(--color-milky);
+}
+
+.btn-header:active {
+    background-color: var(--color-black-haze);
+    transform: scale(0.98);
+}
+
+.btn-header:disabled,
+.btn-header.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-header.btn-sm {
+    height: 32px;
+    font-size: 14px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.btn-header.btn-md {
+    height: 40px;
+    font-size: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Language Selector Button */
+.btn-lang-selector {
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    height: 35px;
+    padding: 0 0.6rem;
+    border: 1px solid white;
+    border-radius: 9999px;
+}
+
+.btn-lang-selector:hover {
+    color: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+}
+
+.btn-lang-selector:active {
+    color: var(--color-blue-yankees);
+    border-color: var(--color-blue-yankees);
+}
+
+.btn-lang-selector.active {
+    font-weight: 700;
+}
+
+.btn-lang-selector:disabled,
+.btn-lang-selector.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/**
+ * Header dropdown component styles
+ */
+/* Language dropdown positioning */
+.language-dropdown {
+    right: 0;
+}
+
+/* Nav dropdown positioning */
+.nav-dropdown {
+    left: 20px;
+    min-width: 220px;
+}
+
+/**
+ * Mobile menu styles
+ */
+/* Mobile Menu container */
+#mobile-menu {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+#mobile-menu.menu-open {
+    opacity: 1;
+}
+
+/* Mobile nav link styling */
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 0;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.mobile-nav-link:hover {
+    transform: translateX(10px);
+}
+
+.mobile-nav-link.active {
+    font-weight: 500;
+}
+
+/* Keep consistent height for language switcher and menu toggle */
+.btn-lang-selector {
+    height: 35px !important;
+    min-height: 35px !important;
+}
+
+/* Keep menu button white */
+#mobile-menu-button,
+#mobile-menu-button:hover,
+#mobile-menu-button:active,
+#mobile-menu-button:focus {
+    color: white !important;
+    border-color: white !important;
+}
+
+/**
+ * Responsive adjustments
+ */
+
+/* Desktop/Laptop screens */
+@media (min-width: 1366px) {
+    .header-padding {
+        padding: 1.5rem 3rem;
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 1024px) {
+    .main-nav {
+        display: flex;
+    }
+
+    #mobile-menu-button {
+        display: none !important;
+    }
+
+    /* Hide mobile elements */
+    .mobile-nav {
+        display: none;
+    }
+}
+
+/* Mobile and below */
+@media (max-width: 1023px) {
+    .main-nav {
+        display: none;
+    }
+
+    .header-padding {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .dropdown-toggle-label,
+    label[for="mobile-menu-toggle"],
+    label[for="language-dropdown"],
+    .dropdown-wrapper label {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 639px) {
+    .header-padding {
+        padding: 1rem 1rem;
+    }
+}

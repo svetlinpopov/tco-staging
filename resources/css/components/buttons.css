@@ -54,21 +54,6 @@
     line-height: 1;
 }
 
-/* Header button uses different sizing */
-.btn-header.btn-sm {
-    height: 32px;
-    font-size: 14px;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-}
-
-.btn-header.btn-md {
-    height: 40px;
-    font-size: 16px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
 /**
  * Button Variants
  */
@@ -144,63 +129,6 @@
 
 .btn-secondary:disabled,
 .btn-secondary.disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-/* Header Button */
-.btn-header {
-    background-color: white;
-    color: var(--color-charcoal);
-    border-radius: 9999px;
-    font-weight: 600;
-}
-
-.btn-header:hover {
-    background-color: var(--color-milky);
-}
-
-.btn-header:active {
-    background-color: var(--color-black-haze);
-    transform: scale(0.98);
-}
-
-.btn-header:disabled,
-.btn-header.disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-/* Language Selector Button */
-.btn-lang-selector {
-    background-color: transparent;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    height: 35px;
-    padding: 0 0.6rem;
-    border: 1px solid white;
-    border-radius: 9999px;
-}
-
-.btn-lang-selector:hover {
-    color: var(--color-charcoal);
-    border-color: var(--color-charcoal);
-}
-
-.btn-lang-selector:active {
-    color: var(--color-blue-yankees);
-    border-color: var(--color-blue-yankees);
-}
-
-.btn-lang-selector.active {
-    font-weight: 700;
-}
-
-.btn-lang-selector:disabled,
-.btn-lang-selector.disabled {
     opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
