@@ -82,3 +82,16 @@
     75% { transform: translate(-40px, -40px) rotate(-1deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
 }
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+    .floating-svg {
+        left: 65%;
+    }
+}
+/* Mobile screens */
+@media (max-width: 450px) {
+    .floating-svg {
+        left: 100%;
+    }
+}

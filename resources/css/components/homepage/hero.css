@@ -4,28 +4,29 @@
  */
 
  .hero-headlines-container {
-    /* Position in the center but with offset */
+    /* Fixed positioning in the center */
     position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 10;
 
-    /* Position adjustments */
-    top: 35%; /* Move up relative to center */
-    left: 65%; /* Move left from center */
-    transform: translate(-50%, -50%); /* Center with offset */
+    /* Position from bottom instead of top */
+    bottom: 50%;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center without vertical offset */
 
     /* Prevent text selection */
     user-select: none;
 
-    /* Add fixed width to maintain position */
-    width: 100%;
+    /* Maintain content width */
+    width: auto;
     max-width: 1200px;
 }
 
 /* Container for the headings with text alignment */
 .hero-headlines-wrapper {
-    text-align: left;
+    position: relative;
+    left: -110px;
 }
 
 #hero-headline-1,
@@ -36,48 +37,59 @@
     color: var(--color-text-light);
 }
 
+#hero-headline-1 {
+    /* Light italic variant with proper margin */
+    position: absolute;
+    left: 155px;
+    bottom: 215px;
+    width: max-content;
+}
+
 #hero-headline-3 {
     letter-spacing: 0.01em; /* -1% */
 }
 
-#hero-headline-1 {
-    /* Light italic variant with left margin */
-    margin-left: 14%; /* Percentage-based margin for responsiveness */
-    margin-bottom: 0.10em; /* Reduced vertical spacing */
-}
-
-/* Medium screens */
-@media (max-width: 1280px) {
-    .hero-headlines-container {
-        left: 40%;
+/* Desktop/Laptop screens */
+@media (max-width: 1368px) {
+    #hero-headline-1,
+    #hero-headline-2,
+    #hero-headline-3 {
+        line-height: 0.90;
+        font-size: 96px;
     }
 
     #hero-headline-1 {
-        margin-left: 8%;
+        bottom: 185px;
+        left: 135px;
     }
 }
 
 /* Tablet screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .hero-headlines-container {
-        top: 40%;
-        left: 35%;
-    }
-
-    #hero-headline-1 {
-        margin-left: 5%;
+        top: 20%;
     }
 }
 
 /* Mobile screens */
-@media (max-width: 640px) {
+@media (max-width: 450px) {
     .hero-headlines-container {
-        top: 40%;
-        left: 30%;
-        width: 90%;
+        top: 15%;
+    }
+
+    .hero-headlines-wrapper {
+        position: static;
+        text-align: right;
+    }
+
+    #hero-headline-1,
+    #hero-headline-2,
+    #hero-headline-3 {
+        line-height: 0.90;
+        font-size: 56px;
     }
 
     #hero-headline-1 {
-        margin-left: 40px;
+        position: static;
     }
 }
