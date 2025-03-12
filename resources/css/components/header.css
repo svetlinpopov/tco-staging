@@ -174,23 +174,9 @@
 #mobile-nav-links {
     width: 100%;
     margin-top: 10%; /* Static distance from top */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Style for main mobile navigation links */
-#mobile-nav-links > a.mobile-nav-link {
-    border-bottom: 1px solid white;
-    border-left: none;
-    border-right: none;
-    padding: 0 16px 12px 16px; /* Add horizontal padding inside the borders */
-    display: block;
-    width: 100%;
-}
-
-/* Add top border only to the first direct link */
-#mobile-nav-links > a.mobile-nav-link:first-child {
-    border-top: 1px solid white;
-    padding-top: 12px; /* Add some padding to make the top border look better */
-}
 /* Mobile Menu container */
 #mobile-menu {
     transition: opacity 0.3s ease;
@@ -213,10 +199,69 @@
 /* Mobile nav link styling */
 .mobile-nav-link {
     display: block;
-    padding: 0.75rem 0;
     color: white;
     transition: all 0.3s ease;
     text-decoration: none;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+/* Mobile nav group - containing parent and children */
+.mobile-nav-group {
+    position: relative;
+}
+
+/* Mobile nav parent items - those with children */
+.mobile-nav-parent {
+    border-bottom: none !important;
+}
+
+/* Mobile nav item styling */
+.mobile-nav-item, .mobile-nav-parent {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 16px;
+    display: block;
+    width: 100%;
+}
+
+/* Numeric prefixes for main menu items */
+.mobile-nav-number {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    color: #ffffff80;
+}
+
+/* Mobile nav children container */
+.mobile-nav-children {
+    margin: 0 !important;
+}
+
+/* Mobile nav child items */
+.mobile-nav-child {
+    position: relative;
+    padding-left: 65px;
+    padding-bottom: 20px;
+    border-bottom: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Last child in a group should have bottom border */
+.mobile-nav-last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 20px;
+}
+
+/* Bullet points for child menu items */
+.mobile-nav-bullet {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    transform: translateY(-50%);
+    color: white;
 }
 
 .mobile-nav-link:hover {

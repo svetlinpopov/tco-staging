@@ -41,7 +41,7 @@ export function initMenuToggle() {
     menuButton.addEventListener('click', toggleMenu);
 
     // Close menu when clicking links
-    const navLinks = mobileMenu.querySelectorAll('a');
+    const navLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (isMenuOpen) toggleMenu();

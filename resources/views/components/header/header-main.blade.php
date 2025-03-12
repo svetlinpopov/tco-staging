@@ -75,29 +75,57 @@
     <div id="mobile-menu-frame" class="pt-24 h-full w-full flex flex-col">
         <div class="flex-1 overflow-y-auto w-full">
             <!-- Navigation Links -->
-            <div id="mobile-nav-links" class="space-y-8 w-full">
-                <a href="#" wire:navigate class="{{ request()->routeIs('clients*') ? 'active' : '' }} mobile-nav-link text-3xl font-light">
-                    {{ __('navlinks.clients') }}
-                </a>
-                <!-- Client submenu items for mobile -->
-                <div class="pl-4 space-y-6">
-                    <a href="#" wire:navigate class="{{ request()->routeIs('client.therapist_list') ? 'active' : '' }} mobile-nav-link text-2xl font-light">
-                        {{ __('navlinks.therapist_list') }}
+            <div id="mobile-nav-links" class="w-full">
+                <!-- For Clients with submenu - no bottom border on parent -->
+                <div class="mobile-nav-group">
+                    <a href="#" wire:navigate
+                        id="mobile-nav-item-1"
+                        class="{{ request()->routeIs('clients*') ? 'active' : '' }} mobile-nav-link mobile-nav-parent text-3xl font-light">
+                        <span class="mobile-nav-number">01.</span>
+                        {{ __('navlinks.clients') }}
                     </a>
-                    <a href="#" wire:navigate class="{{ request()->routeIs('client.group_therapy') ? 'active' : '' }} mobile-nav-link text-2xl font-light">
-                        {{ __('navlinks.group_therapy') }}
-                    </a>
+                    <!-- Client submenu items for mobile -->
+                    <div class="mobile-nav-children">
+                        <a href="#" wire:navigate
+                            id="mobile-nav-child-1"
+                            class="{{ request()->routeIs('client.therapist_list') ? 'active' : '' }} mobile-nav-link mobile-nav-child text-2xl font-light">
+                            <span class="mobile-nav-bullet">•</span>
+                            {{ __('navlinks.therapist_list') }}
+                        </a>
+                        <a href="#" wire:navigate
+                            id="mobile-nav-child-2"
+                            class="{{ request()->routeIs('client.group_therapy') ? 'active' : '' }} mobile-nav-link mobile-nav-child text-2xl font-light mobile-nav-last-child">
+                            <span class="mobile-nav-bullet">•</span>
+                            {{ __('navlinks.group_therapy') }}
+                        </a>
+                    </div>
                 </div>
-                <a href="#" wire:navigate class="{{ request()->routeIs('therapists') ? 'active' : '' }} mobile-nav-link text-3xl font-light">
+
+                <a href="#" wire:navigate
+                    id="mobile-nav-item-2"
+                    class="{{ request()->routeIs('therapists') ? 'active' : '' }} mobile-nav-link mobile-nav-item text-3xl font-light">
+                    <span class="mobile-nav-number">02.</span>
                     {{ __('navlinks.therapists') }}
                 </a>
-                <a href="#" wire:navigate class="{{ request()->routeIs('companies') ? 'active' : '' }} mobile-nav-link text-3xl font-light">
+
+                <a href="#" wire:navigate
+                    id="mobile-nav-item-3"
+                    class="{{ request()->routeIs('companies') ? 'active' : '' }} mobile-nav-link mobile-nav-item text-3xl font-light">
+                    <span class="mobile-nav-number">03.</span>
                     {{ __('navlinks.companies') }}
                 </a>
-                <a href="#" wire:navigate class="{{ request()->routeIs('about') ? 'active' : '' }} mobile-nav-link text-3xl font-light">
+
+                <a href="#" wire:navigate
+                    id="mobile-nav-item-4"
+                    class="{{ request()->routeIs('about') ? 'active' : '' }} mobile-nav-link mobile-nav-item text-3xl font-light">
+                    <span class="mobile-nav-number">04.</span>
                     {{ __('navlinks.about') }}
                 </a>
-                <a href="#" wire:navigate class="{{ request()->routeIs('contact') ? 'active' : '' }} mobile-nav-link text-3xl font-light">
+
+                <a href="#" wire:navigate
+                    id="mobile-nav-item-5"
+                    class="{{ request()->routeIs('contact') ? 'active' : '' }} mobile-nav-link mobile-nav-item text-3xl font-light">
+                    <span class="mobile-nav-number">05.</span>
                     {{ __('navlinks.contact') }}
                 </a>
             </div>
