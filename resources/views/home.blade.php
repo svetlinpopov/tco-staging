@@ -16,9 +16,9 @@
                 </div>
             </div>
 
-            <!-- Hero Headlines Container with z-index 10 -->
+            <!-- Hero Headlines Container with z-index 10 - Modified structure -->
             <div class="hero-headlines-container z-10">
-                <div class="mx-auto text-center">
+                <div class="hero-headlines-wrapper">
                     <h1 id="hero-headline-1" class="headline-1-light-italic">Expert care.</h1>
                     <h1 id="hero-headline-2" class="headline-1">Simplified.</h1>
                     <h1 id="hero-headline-3" class="headline-1">Balanced.</h1>
