@@ -72,10 +72,10 @@
 
 <!-- Mobile Menu - Outside the header for cleaner placement -->
 <div id="mobile-menu" class="fixed inset-0 bg-del-rio z-20 hidden">
-    <div class="pt-24 px-6 h-full flex flex-col">
-        <div class="flex-1 overflow-y-auto">
+    <div id="mobile-menu-frame" class="pt-24 h-full w-full flex flex-col">
+        <div class="flex-1 overflow-y-auto w-full">
             <!-- Navigation Links -->
-            <div class="space-y-8">
+            <div id="mobile-nav-links" class="space-y-8 w-full">
                 <a href="#" wire:navigate class="{{ request()->routeIs('clients*') ? 'active' : '' }} mobile-nav-link text-3xl font-light">
                     {{ __('navlinks.clients') }}
                 </a>

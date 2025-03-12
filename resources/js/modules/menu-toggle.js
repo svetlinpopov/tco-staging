@@ -47,4 +47,12 @@ export function initMenuToggle() {
             if (isMenuOpen) toggleMenu();
         });
     });
+
+    // Handle window resize - ensure menu state is correct when switching between mobile and desktop
+    window.addEventListener('resize', () => {
+        // If window width becomes larger than 1024px and menu is open, close it
+        if (window.innerWidth > 1024 && isMenuOpen) {
+            toggleMenu();
+        }
+    });
 }
