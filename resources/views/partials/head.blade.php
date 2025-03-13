@@ -19,13 +19,13 @@
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<style>
+<!--<style>
     /* Temporary styling override - REMOVE BEFORE PRODUCTION */
     #mobile-menu {
         display: flex !important;
         opacity: 1 !important;
     }
-</style>
+</style>-->
 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 @livewireStyles

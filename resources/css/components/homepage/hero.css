@@ -67,19 +67,33 @@
 /* Tablet screens */
 @media (max-width: 1024px) {
     .hero-headlines-container {
-        top: 20%;
+        top: 25%;
     }
+}
+
+@media (max-width: 767px) {
+    #hero-headline-1,
+    #hero-headline-2,
+    #hero-headline-3 {
+        line-height: 0.90;
+        font-size: 64px;
+    }
+
+    .hero-headlines-wrapper {
+        position: static;
+        text-align: right;
+    }
+
+    #hero-headline-1 {
+        position: static;
+    }
+
 }
 
 /* Mobile screens */
 @media (max-width: 450px) {
     .hero-headlines-container {
         top: 15%;
-    }
-
-    .hero-headlines-wrapper {
-        position: static;
-        text-align: right;
     }
 
     #hero-headline-1,
@@ -89,7 +103,5 @@
         font-size: 56px;
     }
 
-    #hero-headline-1 {
-        position: static;
-    }
+
 }

@@ -115,7 +115,7 @@
                     {{ __('navlinks.companies') }}
                 </a>
 
-                <a href="#" wire:navigate
+                <a href="{{ route('about') }}" wire:navigate
                     id="mobile-nav-item-4"
                     class="{{ request()->routeIs('about') ? 'active' : '' }} mobile-nav-link mobile-nav-item text-3xl font-light">
                     <span class="mobile-nav-number">04.</span>
@@ -132,15 +132,15 @@
         </div>
 
         <!-- Footer Actions -->
-        <div class="py-8 border-t border-white/20">
+        <div class="py-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <livewire:language-switcher />
+                </div>
                 <div>
                     <x-ui.button variant="header" href="#" wire:navigate class="w-full">
                         {{ __('navlinks.ctamatched') }}
                     </x-ui.button>
-                </div>
-                <div>
-                    <livewire:language-switcher />
                 </div>
             </div>
         </div>
