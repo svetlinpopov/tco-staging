@@ -25,6 +25,11 @@
                 </div>
             </div>
 
+            <!-- Person Overlay Container with z-index 15 -->
+            <div class="person-overlay-container">
+                <div class="person-overlay-image" alt="Person overlay"></div>
+            </div>
+
             <div class="mx-auto max-w-7xl flex items-center justify-center w-full py-16 relative z-5">
                 <!-- Main content container with higher z-index than background and circles -->
             </div>
