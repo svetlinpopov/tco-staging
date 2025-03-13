@@ -21,6 +21,7 @@
 @import './components/homepage/person-overlay.css'; /* Added person overlay component */
 @import './components/homepage/stat-card.css'; /* Added stat card component */
 @import './components/header.css';
+@import './components/svg-icons.css'; /* Added SVG icons component */
 
 /* Laravel and framework imports */
 @source "../views";

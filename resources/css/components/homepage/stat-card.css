@@ -22,7 +22,7 @@
     display: flex;
     gap: 4px;
     margin-bottom: 12px;
-    transition: opacity 1.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 /* Individual dot styling */
@@ -33,7 +33,7 @@
     background-color: white;
     opacity: 0.3;
     cursor: pointer;
-    transition: opacity 1.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 /* Active dot state */
@@ -62,7 +62,7 @@
     padding: 24px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1.5s ease, visibility 1.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,17 +74,21 @@
     visibility: visible;
 }
 
-/* Icon placeholder */
+/* Icon placeholder - updated for SVG icon */
 .stat-card-icon {
     position: absolute;
     top: 24px;
     right: 24px;
-    width: 26px;
-    height: 26px;
-    border: 1px solid var(--color-charcoal);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* SVG icon styling */
+.stat-card-icon-svg {
+    height: 22px;
+    /* SVG coloring will be handled by modifying the SVG files directly
+       or by applying fill directly to the SVG elements */
 }
 
 /* Primary statistic value */
@@ -113,19 +117,22 @@
 /* Media queries for responsive adjustments */
 @media (max-width: 1024px) {
     .stat-card-container {
-        bottom: 8%;
-        left: 5%;
+        bottom: 5%;
+        left: 3%;
     }
 }
 
 /* Mobile screens */
 @media (max-width: 450px) {
     .stat-card-container {
-        width: 180px;
-        height: 150px;
-        bottom: auto;
+        bottom: 3%;
         left: 5%;
-        top: 140px;
+    }
+
+    .dot-slider {
+        position: absolute;
+        left: 0;
+        transform: none;
     }
 
     .stat-value {

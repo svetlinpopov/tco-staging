@@ -1,0 +1,14 @@
+/**
+ * SVG Icons Component
+ * Ensures consistent coloring and styling of SVG icons across the application
+ */
+
+/* Apply filters to recolor SVGs */
+.svg-charcoal {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(15%) saturate(1166%) hue-rotate(188deg) brightness(92%) contrast(87%);
+}
+
+/* This filter creates the charcoal color (#3E4659) for SVGs */
+.stat-card-icon img {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(15%) saturate(1166%) hue-rotate(188deg) brightness(92%) contrast(87%);
+}

@@ -4,17 +4,17 @@
         [
             'value' => '12k',
             'description' => 'Individual Matches',
-            'icon' => 'user-check' // Placeholder for future icon implementation
+            'icon' => 'heart'
         ],
         [
             'value' => '97%',
             'description' => 'Client Satisfaction',
-            'icon' => 'thumbs-up' // Placeholder for future icon implementation
+            'icon' => 'fire-left'
         ],
         [
             'value' => '5k+',
             'description' => 'Certified Therapists',
-            'icon' => 'certificate' // Placeholder for future icon implementation
+            'icon' => 'star-favorite'
         ]
     ]
 ])
@@ -42,9 +42,9 @@
                 class="stat-card"
                 :class="{ 'active': activeIndex === {{ $index }} }"
             >
-                <!-- Icon placeholder -->
+                <!-- Dynamic icon based on card type -->
                 <div class="stat-card-icon">
-                    <!-- Will be replaced with actual icon in the future -->
+                    <img src="{{ Vite::asset('resources/img/icons/' . $card['icon'] . '.svg') }}" alt="{{ $card['icon'] }}" class="stat-card-icon-svg">
                 </div>
 
                 <!-- Stat value -->

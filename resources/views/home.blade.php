@@ -45,17 +45,17 @@
                 [
                     'value' => '12k',
                     'description' => 'Individual Matches',
-                    'icon' => 'user-check'
+                    'icon' => 'heart'
                 ],
                 [
                     'value' => '97%',
                     'description' => 'Client Satisfaction',
-                    'icon' => 'thumbs-up'
+                    'icon' => 'fire-left'
                 ],
                 [
                     'value' => '5k+',
                     'description' => 'Certified Therapists',
-                    'icon' => 'certificate'
+                    'icon' => 'star-favorite'
                 ]
             ]" />
 

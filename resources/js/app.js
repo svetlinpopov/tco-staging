@@ -111,7 +111,9 @@ document.addEventListener('livewire:init', () => {
     // Register Alpine components when Livewire initializes
     window.Alpine.data('statCards', () => ({
         activeIndex: 0,
+        isTransitioning: false,
         rotationTimer: null,
+        transitionDuration: 500, // 1.5 seconds in milliseconds, matching CSS transition
 
         init() {
             // Start automatic rotation
@@ -137,9 +139,11 @@ document.addEventListener('livewire:init', () => {
 
             // Set new rotation timer
             this.rotationTimer = setInterval(() => {
-                // Calculate next index
-                const cardCount = this.$el.querySelectorAll('.stat-card').length;
-                this.activeIndex = (this.activeIndex + 1) % cardCount;
+                if (!this.isTransitioning) {
+                    // Calculate next index
+                    const cardCount = this.$el.querySelectorAll('.stat-card').length;
+                    this.changeCard((this.activeIndex + 1) % cardCount);
+                }
             }, 5000); // 5 seconds per card
         },
 
@@ -150,10 +154,37 @@ document.addEventListener('livewire:init', () => {
             }
         },
 
+        changeCard(newIndex) {
+            if (this.isTransitioning || newIndex === this.activeIndex) return;
+
+            this.isTransitioning = true;
+
+            // First hide current card
+            const cards = this.$el.querySelectorAll('.stat-card');
+            cards[this.activeIndex].classList.remove('active');
+
+            // After transition completes, show new card
+            setTimeout(() => {
+                this.activeIndex = newIndex;
+                cards[this.activeIndex].classList.add('active');
+
+                // Reset transitioning state after the fade-in completes
+                setTimeout(() => {
+                    this.isTransitioning = false;
+                }, this.transitionDuration);
+            }, this.transitionDuration);
+        },
+
         setActiveIndex(index) {
-            this.activeIndex = index;
-            this.stopRotation();
-            this.startRotation();
+            if (!this.isTransitioning && index !== this.activeIndex) {
+                this.stopRotation();
+                this.changeCard(index);
+
+                // Resume rotation after the complete transition
+                setTimeout(() => {
+                    this.startRotation();
+                }, this.transitionDuration * 2);
+            }
         }
     }));
 });
