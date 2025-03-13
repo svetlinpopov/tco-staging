@@ -15,7 +15,7 @@ export function initDropdowns() {
     // First, let's add CSS for smooth transitions
     const style = document.createElement('style');
     style.textContent = `
-        .dropdown-menu, .language-dropdown, .nav-dropdown {
+        .dropdown-menu, .language-dropdown, .nav-dropdown, .language-dropup {
             opacity: 0;
             visibility: hidden;
             transition: opacity ${FADE_DURATION}ms ease;
@@ -43,68 +43,79 @@ export function initDropdowns() {
     let hoverOutTimer = null;
 
     // Process all dropdown containers
-    const containers = document.querySelectorAll('.dropdown-container, .language-dropdown-container, .nav-dropdown-container');
+    const containers = document.querySelectorAll(
+        '.dropdown-container, .language-dropdown-container, .nav-dropdown-container, .mobile-language-dropdown-container'
+    );
 
     containers.forEach(container => {
-        const trigger = container.querySelector('.dropdown-toggle-label, .btn-lang-selector, .nav-dropdown-trigger, .nav-item');
-        const dropdown = container.querySelector('.dropdown-menu, .language-dropdown, .nav-dropdown');
+        const trigger = container.querySelector(
+            '.dropdown-toggle-label, .btn-lang-selector, .btn-mobile-lang-selector, .nav-dropdown-trigger, .nav-item'
+        );
+        const dropdown = container.querySelector(
+            '.dropdown-menu, .language-dropdown, .nav-dropdown, .language-dropup'
+        );
 
         if (!trigger || !dropdown) return;
 
-        // Handle hover interactions
-        container.addEventListener('mouseenter', () => {
-            // Clear any pending hide timer
-            if (hoverOutTimer) {
-                clearTimeout(hoverOutTimer);
-                hoverOutTimer = null;
-            }
+        // Skip hover functionality for mobile language dropup
+        const isMobileDropup = container.classList.contains('mobile-language-dropdown-container');
 
-            // Don't interfere if a dropdown is open via click
-            if (openDropdown === dropdown && openByClick) {
-                return;
-            }
+        // Handle hover interactions (skip for mobile dropup)
+        if (!isMobileDropup) {
+            container.addEventListener('mouseenter', () => {
+                // Clear any pending hide timer
+                if (hoverOutTimer) {
+                    clearTimeout(hoverOutTimer);
+                    hoverOutTimer = null;
+                }
 
-            // Set a short delay before showing
-            hoverInTimer = setTimeout(() => {
-                // If another dropdown is currently open by click, don't change it
-                if (openDropdown && openDropdown !== dropdown && openByClick) {
+                // Don't interfere if a dropdown is open via click
+                if (openDropdown === dropdown && openByClick) {
                     return;
                 }
 
-                // If another dropdown is open by hover, close it
-                if (openDropdown && openDropdown !== dropdown) {
-                    fadeOutDropdown(openDropdown);
+                // Set a short delay before showing
+                hoverInTimer = setTimeout(() => {
+                    // If another dropdown is currently open by click, don't change it
+                    if (openDropdown && openDropdown !== dropdown && openByClick) {
+                        return;
+                    }
+
+                    // If another dropdown is open by hover, close it
+                    if (openDropdown && openDropdown !== dropdown) {
+                        fadeOutDropdown(openDropdown);
+                    }
+
+                    // Open this dropdown
+                    fadeInDropdown(dropdown);
+                    openDropdown = dropdown;
+                    openTrigger = trigger;
+                    openByClick = false;
+                }, HOVER_DELAY);
+            });
+
+            container.addEventListener('mouseleave', () => {
+                // Clear any pending show timer
+                if (hoverInTimer) {
+                    clearTimeout(hoverInTimer);
+                    hoverInTimer = null;
                 }
 
-                // Open this dropdown
-                fadeInDropdown(dropdown);
-                openDropdown = dropdown;
-                openTrigger = trigger;
-                openByClick = false;
-            }, HOVER_DELAY);
-        });
-
-        container.addEventListener('mouseleave', () => {
-            // Clear any pending show timer
-            if (hoverInTimer) {
-                clearTimeout(hoverInTimer);
-                hoverInTimer = null;
-            }
-
-            // Don't hide if opened by click
-            if (openDropdown === dropdown && openByClick) {
-                return;
-            }
-
-            // Set delay before hiding
-            hoverOutTimer = setTimeout(() => {
-                if (openDropdown === dropdown && !openByClick) {
-                    fadeOutDropdown(dropdown);
-                    openDropdown = null;
-                    openTrigger = null;
+                // Don't hide if opened by click
+                if (openDropdown === dropdown && openByClick) {
+                    return;
                 }
-            }, HOVER_OUT_DELAY);
-        });
+
+                // Set delay before hiding
+                hoverOutTimer = setTimeout(() => {
+                    if (openDropdown === dropdown && !openByClick) {
+                        fadeOutDropdown(dropdown);
+                        openDropdown = null;
+                        openTrigger = null;
+                    }
+                }, HOVER_OUT_DELAY);
+            });
+        }
 
         // Handle click interactions
         trigger.addEventListener('click', function(e) {
