@@ -17,6 +17,7 @@
 @import './components/sections.css';
 @import './components/floating-circles.css'; /* Added floating circles component */
 @import './components/homepage/hero.css'; /* Added hero component */
+@import './components/homepage/hero-cta.css'; /* Added hero CTA component */
 @import './components/homepage/person-overlay.css'; /* Added person overlay component */
 @import './components/header.css';
 

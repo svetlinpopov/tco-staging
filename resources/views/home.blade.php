@@ -30,6 +30,16 @@
                 <div class="person-overlay-image" alt="Person overlay"></div>
             </div>
 
+            <!-- Hero CTA Container with z-index 20 -->
+            <div class="hero-cta-container">
+                <p class="hero-cta-text">
+                    We provide the support you need to achieve balance, embrace your true self, and navigate your journey.
+                </p>
+                <x-ui.button variant="primary" class="btn-xl" href="#" wire:navigate>
+                    Find a Therapist
+                </x-ui.button>
+            </div>
+
             <div class="mx-auto max-w-7xl flex items-center justify-center w-full py-16 relative z-5">
                 <!-- Main content container with higher z-index than background and circles -->
             </div>

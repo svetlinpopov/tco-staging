@@ -1,0 +1,65 @@
+/**
+ * Hero CTA Component
+ * Styles for the hero section call-to-action container
+ */
+
+ .hero-cta-container {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    z-index: 20; /* Higher than person overlay (z-index: 15) */
+    width: 278px;
+}
+
+.hero-cta-text {
+    color: var(--color-text-light);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+.hero-cta-container .btn {
+    width: 100%;
+}
+
+/* Desktop/Laptop screens */
+@media (max-width: 1368px) {
+    .hero-cta-container {
+        width: 278px;
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+    .hero-cta-container {
+        width: 250px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    .hero-cta-container {
+        width: 220px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 450px) {
+    .hero-cta-container {
+        width: 90%;
+        max-width: 250px;
+        position: absolute;
+        bottom: auto;
+        right: auto;
+        left: 50%;
+        top: 275px;
+        transform: translateX(-50%);
+    }
+
+    .hero-cta-text {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+}

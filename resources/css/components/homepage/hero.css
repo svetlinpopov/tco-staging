@@ -103,7 +103,7 @@
 /* Mobile screens */
 @media (max-width: 450px) {
     .hero-headlines-container {
-        top: 15%;
+        top: 100px;
     }
 
     #hero-headline-1,
