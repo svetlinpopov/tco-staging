@@ -13,7 +13,11 @@
     /* Position from bottom instead of top */
     bottom: 50%;
     left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center without vertical offset */
+    transform: translateX(-50%) translateY(100vh); /* Start below viewport */
+
+    /* Animation properties */
+    opacity: 0;
+    transition: transform 1.3s cubic-bezier(0.1, 0.7, 0.1, 1), opacity 1.3s cubic-bezier(0.1, 0.7, 0.1, 1);
 
     /* Prevent text selection */
     user-select: none;
@@ -21,6 +25,12 @@
     /* Maintain content width */
     width: auto;
     max-width: 1200px;
+}
+
+/* Animation active state */
+.hero-headlines-container.animate-in {
+    transform: translateX(-50%) translateY(0); /* Final position */
+    opacity: 1;
 }
 
 /* Container for the headings with text alignment */
@@ -102,6 +112,4 @@
         line-height: 0.90;
         font-size: 56px;
     }
-
-
 }

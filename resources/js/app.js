@@ -11,6 +11,7 @@ import { initHeaderEffects } from './modules/header-effects';
 import { initNavigation } from './modules/navigation';
 import { initDropdowns } from './modules/dropdowns';
 import { initMenuToggle } from './modules/menu-toggle';
+import { initHeroAnimations } from './modules/hero-animations';
 import { enableDiagnostics, disableDiagnostics } from './utils/helpers';
 
 /**
@@ -27,6 +28,9 @@ function initializeAll() {
 
     // Initialize mobile menu toggle
     initMenuToggle();
+
+    // Initialize hero animations
+    initHeroAnimations();
 
     // Initialize dropdown menus - this needs to run last
     initDropdowns();
