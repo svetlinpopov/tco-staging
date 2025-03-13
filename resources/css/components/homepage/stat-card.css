@@ -1,0 +1,138 @@
+/**
+ * Stat Card Component
+ * Displays animated statistics cards with dot slider navigation
+ */
+
+/* Stat card container */
+.stat-card-container {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    z-index: 20; /* Same as hero-cta */
+    width: 207px;
+    height: 172px;
+}
+
+/* Dot slider container */
+.dot-slider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    transition: opacity 1.5s ease;
+}
+
+/* Individual dot styling */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: opacity 1.5s ease;
+}
+
+/* Active dot state */
+.dot.active {
+    opacity: 1;
+}
+
+/* Card container */
+.stat-cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-azureish-white);
+    border-radius: 16px;
+}
+
+/* Individual stat card */
+.stat-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-azureish-white);
+    border-radius: 16px;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Active card state */
+.stat-card.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Icon placeholder */
+.stat-card-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid var(--color-charcoal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Primary statistic value */
+.stat-value {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--color-charcoal);
+}
+
+/* Statistic description */
+.stat-description {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color-charcoal);
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 1024px) {
+    .stat-card-container {
+        bottom: 8%;
+        left: 5%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 450px) {
+    .stat-card-container {
+        width: 180px;
+        height: 150px;
+        bottom: auto;
+        left: 5%;
+        top: 140px;
+    }
+
+    .stat-value {
+        font-size: 40px;
+    }
+
+    .stat-description {
+        font-size: 16px;
+    }
+}

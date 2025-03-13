@@ -19,6 +19,7 @@
 @import './components/homepage/hero.css'; /* Added hero component */
 @import './components/homepage/hero-cta.css'; /* Added hero CTA component */
 @import './components/homepage/person-overlay.css'; /* Added person overlay component */
+@import './components/homepage/stat-card.css'; /* Added stat card component */
 @import './components/header.css';
 
 /* Laravel and framework imports */

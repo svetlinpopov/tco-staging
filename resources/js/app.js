@@ -12,6 +12,7 @@ import { initNavigation } from './modules/navigation';
 import { initDropdowns } from './modules/dropdowns';
 import { initMenuToggle } from './modules/menu-toggle';
 import { initHeroAnimations } from './modules/hero-animations';
+import { initStatCards } from './modules/stat-cards';
 import { enableDiagnostics, disableDiagnostics } from './utils/helpers';
 
 /**
@@ -31,6 +32,9 @@ function initializeAll() {
 
     // Initialize hero animations
     initHeroAnimations();
+
+    // Initialize stat cards
+    initStatCards();
 
     // Initialize dropdown menus - this needs to run last
     initDropdowns();
@@ -92,9 +96,64 @@ document.addEventListener('DOMContentLoaded', () => {
 // Handle Livewire navigation events
 document.addEventListener('livewire:navigated', initializeAll);
 
+// Initialize Alpine components when Alpine is loaded
+document.addEventListener('alpine:init', () => {
+    // Re-initialize stat cards after Alpine loads
+    initStatCards();
+});
+
 // Listen for Livewire events
 document.addEventListener('livewire:init', () => {
     Livewire.on('language-changed', () => {
         initializeAll();
     });
+
+    // Register Alpine components when Livewire initializes
+    window.Alpine.data('statCards', () => ({
+        activeIndex: 0,
+        rotationTimer: null,
+
+        init() {
+            // Start automatic rotation
+            this.startRotation();
+
+            // Pause rotation on hover
+            this.$el.addEventListener('mouseenter', () => this.stopRotation());
+            this.$el.addEventListener('mouseleave', () => this.startRotation());
+
+            // Handle visibility changes (tab switching, etc.)
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    this.stopRotation();
+                } else {
+                    this.startRotation();
+                }
+            });
+        },
+
+        startRotation() {
+            // Clear any existing timer
+            this.stopRotation();
+
+            // Set new rotation timer
+            this.rotationTimer = setInterval(() => {
+                // Calculate next index
+                const cardCount = this.$el.querySelectorAll('.stat-card').length;
+                this.activeIndex = (this.activeIndex + 1) % cardCount;
+            }, 5000); // 5 seconds per card
+        },
+
+        stopRotation() {
+            if (this.rotationTimer) {
+                clearInterval(this.rotationTimer);
+                this.rotationTimer = null;
+            }
+        },
+
+        setActiveIndex(index) {
+            this.activeIndex = index;
+            this.stopRotation();
+            this.startRotation();
+        }
+    }));
 });

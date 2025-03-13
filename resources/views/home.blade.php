@@ -40,6 +40,25 @@
                 </x-ui.button>
             </div>
 
+            <!-- Stat Card Component with z-index 20 -->
+            <x-homepage.stat-card position="center" :cards="[
+                [
+                    'value' => '12k',
+                    'description' => 'Individual Matches',
+                    'icon' => 'user-check'
+                ],
+                [
+                    'value' => '97%',
+                    'description' => 'Client Satisfaction',
+                    'icon' => 'thumbs-up'
+                ],
+                [
+                    'value' => '5k+',
+                    'description' => 'Certified Therapists',
+                    'icon' => 'certificate'
+                ]
+            ]" />
+
             <div class="mx-auto max-w-7xl flex items-center justify-center w-full py-16 relative z-5">
                 <!-- Main content container with higher z-index than background and circles -->
             </div>
