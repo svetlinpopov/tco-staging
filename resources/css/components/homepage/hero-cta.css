@@ -9,6 +9,16 @@
     right: 3%;
     z-index: 20; /* Higher than person overlay (z-index: 15) */
     width: 278px;
+
+    /* Initial position - below viewport */
+    transform: translateY(150%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 1s ease;
+}
+
+.hero-cta-container.animate-in {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .hero-cta-text {
@@ -55,7 +65,11 @@
         right: auto;
         left: 50%;
         top: 275px;
-        transform: translateX(-50%);
+        transform: translate(-50%, 150%); /* Adjusted for different positioning */
+    }
+
+    .hero-cta-container.animate-in {
+        transform: translate(-50%, 0);
     }
 
     .hero-cta-text {

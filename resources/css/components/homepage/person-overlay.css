@@ -22,11 +22,17 @@
     position: absolute;
     width: 100%;
     height: 100%;
-
     background-image: url('../../../img/backgrounds/hero-bg-person-mobile-640x960.png');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    transform: scale(1.15); /* Start 15% zoomed in */
+    transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Zoom animation */
+}
+
+/* Animation active state */
+.person-overlay-image.animate-in {
+    transform: scale(1); /* Final size (normal) */
 }
 
 /* Responsive backgrounds - match the same media queries as the main background */

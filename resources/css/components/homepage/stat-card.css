@@ -11,6 +11,16 @@
     z-index: 20; /* Same as hero-cta */
     width: 207px;
     height: 172px;
+
+    /* Initial position - left of viewport */
+    transform: translateX(-150%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 1s ease;
+}
+
+.stat-card-container.animate-in {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 /* Dot slider container */
