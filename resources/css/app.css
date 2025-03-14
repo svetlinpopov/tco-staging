@@ -1,6 +1,5 @@
 /**
  * Main application stylesheet
- * Imports all component styles and defines global properties
  */
 
 /* Import Tailwind */
@@ -15,13 +14,13 @@
 @import './components/buttons.css';
 @import './components/dropdowns.css';
 @import './components/sections.css';
-@import './components/floating-circles.css'; /* Added floating circles component */
-@import './components/homepage/hero.css'; /* Added hero component */
-@import './components/homepage/hero-cta.css'; /* Added hero CTA component */
-@import './components/homepage/person-overlay.css'; /* Added person overlay component */
-@import './components/homepage/stat-card.css'; /* Added stat card component */
+@import './components/floating-circles.css';
+@import './components/homepage/hero.css';
+@import './components/homepage/hero-cta.css';
+@import './components/homepage/person-overlay.css';
+@import './components/homepage/stat-card.css';
 @import './components/header.css';
-@import './components/svg-icons.css'; /* Added SVG icons component */
+@import './components/svg-icons.css';
 
 /* Laravel and framework imports */
 @source "../views";
@@ -34,7 +33,7 @@ body {
 }
 
 /**
- * Utility classes for general use
+ * Utility classes
  */
 [x-cloak] {
     display: none !important;

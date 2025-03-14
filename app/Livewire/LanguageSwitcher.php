@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 class LanguageSwitcher extends Component
 {
     public $currentLocale;
-    public $locales = ['en', 'de', 'fr', 'es', 'it']; // Add your supported languages here
+    public $locales = ['en', 'de', 'fr', 'es', 'it'];
 
     public function mount()
     {

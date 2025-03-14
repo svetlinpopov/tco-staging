@@ -1,6 +1,5 @@
 /**
  * Mobile Menu Toggle
- * Simple direct manipulation of mobile menu visibility
  */
 
 export function initMenuToggle() {
@@ -48,7 +47,7 @@ export function initMenuToggle() {
         });
     });
 
-    // Handle window resize - ensure menu state is correct when switching between mobile and desktop
+    // Handle window resize
     window.addEventListener('resize', () => {
         // If window width becomes larger than 1024px and menu is open, close it
         if (window.innerWidth > 1024 && isMenuOpen) {

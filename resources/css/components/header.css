@@ -1,6 +1,5 @@
 /**
  * Header Component Styles
- * Comprehensive styles for header, navigation and mobile menu
  */
 
 /**
@@ -173,7 +172,7 @@
 /* Mobile navigation links container */
 #mobile-nav-links {
     width: 100%;
-    margin-top: 10%; /* Static distance from top */
+    margin-top: 10%;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 

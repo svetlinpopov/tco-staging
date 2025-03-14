@@ -1,5 +1,5 @@
 /**
- * Dropdowns Module - With Hover and Click Functionality
+ * Dropdowns Module
  * Supports both hover and click interactions with smooth transitions
  */
 
@@ -12,7 +12,7 @@ const HOVER_OUT_DELAY = 300; // delay before hiding dropdown on mouse leave
  * Initialize all dropdown functionality
  */
 export function initDropdowns() {
-    // First, let's add CSS for smooth transitions
+    // Add CSS for smooth transitions
     const style = document.createElement('style');
     style.textContent = `
         .dropdown-menu, .language-dropdown, .nav-dropdown, .language-dropup {
@@ -36,7 +36,7 @@ export function initDropdowns() {
     // Track state
     let openDropdown = null;
     let openTrigger = null;
-    let openByClick = false; // Whether the current dropdown was opened by click
+    let openByClick = false;
 
     // Hover timers
     let hoverInTimer = null;
@@ -60,33 +60,27 @@ export function initDropdowns() {
         // Skip hover functionality for mobile language dropup
         const isMobileDropup = container.classList.contains('mobile-language-dropdown-container');
 
-        // Handle hover interactions (skip for mobile dropup)
+        // Handle hover interactions
         if (!isMobileDropup) {
             container.addEventListener('mouseenter', () => {
-                // Clear any pending hide timer
                 if (hoverOutTimer) {
                     clearTimeout(hoverOutTimer);
                     hoverOutTimer = null;
                 }
 
-                // Don't interfere if a dropdown is open via click
                 if (openDropdown === dropdown && openByClick) {
                     return;
                 }
 
-                // Set a short delay before showing
                 hoverInTimer = setTimeout(() => {
-                    // If another dropdown is currently open by click, don't change it
                     if (openDropdown && openDropdown !== dropdown && openByClick) {
                         return;
                     }
 
-                    // If another dropdown is open by hover, close it
                     if (openDropdown && openDropdown !== dropdown) {
                         fadeOutDropdown(openDropdown);
                     }
 
-                    // Open this dropdown
                     fadeInDropdown(dropdown);
                     openDropdown = dropdown;
                     openTrigger = trigger;
@@ -95,18 +89,15 @@ export function initDropdowns() {
             });
 
             container.addEventListener('mouseleave', () => {
-                // Clear any pending show timer
                 if (hoverInTimer) {
                     clearTimeout(hoverInTimer);
                     hoverInTimer = null;
                 }
 
-                // Don't hide if opened by click
                 if (openDropdown === dropdown && openByClick) {
                     return;
                 }
 
-                // Set delay before hiding
                 hoverOutTimer = setTimeout(() => {
                     if (openDropdown === dropdown && !openByClick) {
                         fadeOutDropdown(dropdown);
@@ -122,7 +113,6 @@ export function initDropdowns() {
             e.preventDefault();
             e.stopPropagation();
 
-            // Clear any pending timers
             if (hoverInTimer) {
                 clearTimeout(hoverInTimer);
                 hoverInTimer = null;
@@ -133,24 +123,20 @@ export function initDropdowns() {
                 hoverOutTimer = null;
             }
 
-            // Toggle dropdown based on current state
             if (openDropdown === dropdown) {
-                // If already open, close it
                 fadeOutDropdown(dropdown);
                 openDropdown = null;
                 openTrigger = null;
                 openByClick = false;
             } else {
-                // If another dropdown is open, close it
                 if (openDropdown) {
                     fadeOutDropdown(openDropdown);
                 }
 
-                // Open this dropdown
                 fadeInDropdown(dropdown);
                 openDropdown = dropdown;
                 openTrigger = trigger;
-                openByClick = true; // Mark as opened by click
+                openByClick = true;
             }
         });
 
@@ -158,7 +144,6 @@ export function initDropdowns() {
         dropdown.addEventListener('click', function(e) {
             e.stopPropagation();
 
-            // If clicked on a link, close after a short delay
             if (e.target.tagName === 'A' || e.target.closest('a')) {
                 setTimeout(() => {
                     fadeOutDropdown(dropdown);
@@ -174,12 +159,10 @@ export function initDropdowns() {
 
     // Handle document clicks to close clicked-open dropdown
     document.addEventListener('click', function(e) {
-        // If no dropdown is open or the click was inside the open dropdown, do nothing
         if (!openDropdown || openDropdown.contains(e.target) || (openTrigger && openTrigger.contains(e.target))) {
             return;
         }
 
-        // Only close if it was opened by click
         if (openByClick) {
             fadeOutDropdown(openDropdown);
             openDropdown = null;
@@ -188,7 +171,7 @@ export function initDropdowns() {
         }
     });
 
-    // Force disable any existing checkbox toggles to prevent conflicts
+    // Disable any existing checkbox toggles to prevent conflicts
     document.querySelectorAll('input[type="checkbox"].dropdown-toggle').forEach(checkbox => {
         checkbox.disabled = true;
     });

@@ -1,11 +1,9 @@
 /**
  * Stat Cards Module
- * Handles initialization and functionality for statistic cards
  */
 
 /**
- * Initialize stat cards functionality directly
- * This approach manually sets up the dots and cards without relying on Alpine.js
+ * Initialize stat cards functionality
  */
 export function initStatCards() {
     const containers = document.querySelectorAll('.stat-card-container');
@@ -113,8 +111,7 @@ export function initStatCards() {
 }
 
 /**
- * Register Alpine component for stat cards (for compatibility)
- * But we'll rely on the direct DOM manipulation approach
+ * Register Alpine component for stat cards
  */
 export function registerStatCardsComponent() {
     // Empty function to maintain compatibility

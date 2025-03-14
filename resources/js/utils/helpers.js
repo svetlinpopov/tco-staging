@@ -1,18 +1,9 @@
 /**
  * Helper Utilities
- * Common utility functions used across the application
  */
 
 /**
  * Debounce function to improve performance
- * Limits how often a function can be called
- *
- * @example
- * // Usage: Create a debounced function
- * const debouncedScroll = debounce(() => {
- *   // Update UI on scroll
- * }, 100);
- * window.addEventListener('scroll', debouncedScroll);
  *
  * @param {Function} func - The function to debounce
  * @param {number} wait - Time in milliseconds to wait between calls
@@ -29,11 +20,6 @@ export function debounce(func, wait = 20) {
 
 /**
  * Convert hex color to rgba
- * Useful for color manipulations and transparency
- *
- * @example
- * // Usage: Create a semi-transparent color
- * const bgColor = hexToRgba('#3e4659', 0.5); // rgba(62, 70, 89, 0.5)
  *
  * @param {string} hex - Hex color code (with or without #)
  * @param {number} alpha - Alpha channel value (0-1)
@@ -65,19 +51,6 @@ let diagnosticsActive = false;
 
 /**
  * Enable JavaScript diagnostics for debugging
- * Adds visual indicators and console logs for UI interactions
- *
- * @example
- * // Basic usage with default options
- * enableDiagnostics();
- *
- * // Enable specific diagnostics only
- * enableDiagnostics({
- *   dropdowns: true,
- *   navigation: false,
- *   events: true,
- *   verbose: true
- * });
  *
  * @param {Object} options - Configuration options
  * @param {boolean} options.dropdowns - Whether to diagnose dropdowns
@@ -154,7 +127,6 @@ export function enableDiagnostics(options = {}) {
 
 /**
  * Disable active diagnostics
- * Removes all diagnostic listeners and indicators
  *
  * @return {boolean} Success status
  */
@@ -176,7 +148,6 @@ export function disableDiagnostics() {
 
 /**
  * Diagnose dropdown functionality
- * Internal helper for enableDiagnostics
  *
  * @private
  * @param {boolean} verbose - Whether to log verbose details
@@ -226,7 +197,6 @@ function diagDropdowns(verbose = false) {
 
 /**
  * Diagnose navigation functionality
- * Internal helper for enableDiagnostics
  *
  * @private
  * @param {boolean} verbose - Whether to log verbose details

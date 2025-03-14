@@ -9,22 +9,16 @@ class MobileLanguageSwitcher extends Component
 {
     /**
      * Available locales for the application
-     *
-     * @var array
      */
     public $locales = ['en', 'de', 'fr', 'es'];
 
     /**
      * Current selected locale
-     *
-     * @var string
      */
     public $currentLocale;
 
     /**
      * Initialize component state
-     *
-     * @return void
      */
     public function mount()
     {
@@ -33,9 +27,6 @@ class MobileLanguageSwitcher extends Component
 
     /**
      * Switch the application locale
-     *
-     * @param string $locale
-     * @return void
      */
     public function switchLocale($locale)
     {
@@ -59,9 +50,6 @@ class MobileLanguageSwitcher extends Component
 
     /**
      * Get the full display name for a locale
-     *
-     * @param string $locale
-     * @return string
      */
     public function getLocaleName($locale)
     {
@@ -81,9 +69,6 @@ class MobileLanguageSwitcher extends Component
 
     /**
      * Get the 3-letter code for a locale
-     *
-     * @param string $locale
-     * @return string
      */
     public function getLocaleDisplay($locale)
     {
@@ -103,8 +88,6 @@ class MobileLanguageSwitcher extends Component
 
     /**
      * Render the component
-     *
-     * @return \Illuminate\View\View
      */
     public function render()
     {

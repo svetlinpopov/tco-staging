@@ -1,6 +1,5 @@
 /**
  * Button Component Styles
- * Modular button system with consistent sizing and variants
  */
 
 /**
@@ -18,7 +17,6 @@
 
 /**
  * Button Sizes
- * Consistent sizing across all button variants
  */
 .btn-sm {
     height: 40px;
@@ -60,7 +58,7 @@
 .btn-primary {
     background-color: var(--color-charcoal);
     color: white;
-    border-radius: 9999px; /* Pill shape */
+    border-radius: 9999px;
     font-weight: 600;
     transition: all 0.3s ease;
 }

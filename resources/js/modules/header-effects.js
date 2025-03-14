@@ -1,6 +1,5 @@
 /**
  * Header Effects Module
- * Handles header appearance changes on scroll
  */
 
 // Helper to debounce function calls

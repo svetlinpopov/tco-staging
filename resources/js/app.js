@@ -16,8 +16,6 @@ import { initStatCards, registerStatCardsComponent } from './modules/stat-cards'
 
 /**
  * Initialize all functionality
- * This function sets up all interactive components
- * and is called on initial page load and navigation
  */
 function initializeAll() {
     // Initialize header background transition on scroll
