@@ -19,17 +19,13 @@
     ]
 ])
 
-<div
-    class="stat-card-container"
-    x-data="statCards"
->
+<div class="stat-card-container">
     <!-- Dot slider -->
     <div class="dot-slider dot-slider-{{ $position }}">
         @foreach($cards as $index => $card)
             <button
-                @click="setActiveIndex({{ $index }})"
-                class="dot"
-                :class="{ 'active': activeIndex === {{ $index }} }"
+                type="button"
+                class="dot {{ $index === 0 ? 'active' : '' }}"
                 aria-label="Show statistic {{ $index + 1 }}"
             ></button>
         @endforeach
@@ -39,8 +35,7 @@
     <div class="stat-cards">
         @foreach($cards as $index => $card)
             <div
-                class="stat-card"
-                :class="{ 'active': activeIndex === {{ $index }} }"
+                class="stat-card {{ $index === 0 ? 'active' : '' }}"
             >
                 <!-- Dynamic icon based on card type -->
                 <div class="stat-card-icon">
