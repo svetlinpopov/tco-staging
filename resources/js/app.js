@@ -13,6 +13,7 @@ import { initDropdowns } from './modules/dropdowns';
 import { initMenuToggle } from './modules/menu-toggle';
 import { initHeroAnimations } from './modules/hero-animations';
 import { initStatCards, registerStatCardsComponent } from './modules/stat-cards';
+import { initSectionScroll } from './modules/section-scroll';
 
 /**
  * Initialize all functionality
@@ -32,6 +33,9 @@ function initializeAll() {
 
     // Initialize stat cards
     initStatCards();
+
+    // Initialize section scroll - added for smooth section-by-section scrolling
+    initSectionScroll();
 
     // Initialize dropdown menus - this needs to run last
     initDropdowns();
