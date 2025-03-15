@@ -14,3 +14,8 @@ Route::get('/about', function () {
 Route::get('/buttons', function () {
     return view('buttons-demo', ['title' => 'Buttons Demo']);
 })->name('buttons');
+
+// !!!For development purposes only!!!
+Route::get('/test/section-2', function () {
+    return view('test.section-2');
+})->name('test.section-2');

@@ -64,11 +64,9 @@
             </div>
         </section>
 
-        <!-- Section 2 -->
-        <section id="section2" class="snap-section w-full min-h-screen flex items-center justify-center border-b border-neutral-200">
-            <div class="mx-auto max-w-7xl flex items-center justify-center w-full py-16">
-                <h2 class="text-2xl md:text-4xl font-semibold">Container 2</h2>
-            </div>
+        <!-- Section 2 - How it works -->
+        <section id="section2" class="snap-section w-full min-h-screen border-b border-neutral-200 relative">
+            <x-homepage.section-2 />
         </section>
 
         <!-- Section 3 -->

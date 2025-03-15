@@ -5,7 +5,7 @@
 
 /* Background for Section 1 - Hero */
 #section1 {
-    background-image: url('../../img/backgrounds/hero-bg-mobile-640x960.jpg');
+    background-image: url('../../img/backgrounds/home-hero-bg-mobile-640x960.jpg');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -16,31 +16,31 @@
 /* Responsive backgrounds */
 @media (min-width: 640px) {
     #section1 {
-        background-image: url('../../img/backgrounds/hero-bg-sm-768x432.jpg');
+        background-image: url('../../img/backgrounds/home-hero-bg-sm-768x432.jpg');
     }
 }
 
 @media (min-width: 768px) {
     #section1 {
-        background-image: url('../../img/backgrounds/hero-bg-md-1024x576.jpg');
+        background-image: url('../../img/backgrounds/home-hero-bg-md-1024x576.jpg');
     }
 }
 
 @media (min-width: 1024px) {
     #section1 {
-        background-image: url('../../img/backgrounds/hero-bg-lg-1536x864.jpg');
+        background-image: url('../../img/backgrounds/home-hero-bg-lg-1536x864.jpg');
     }
 }
 
 @media (min-width: 1280px) {
     #section1 {
-        background-image: url('../../img/backgrounds/hero-bg-xl-1920x1080.jpg');
+        background-image: url('../../img/backgrounds/home-hero-bg-xl-1920x1080.jpg');
     }
 }
 
 @media (min-width: 1536px) {
     #section1 {
-        background-image: url('../../img/backgrounds/hero-bg-2xl-2560x1440.jpg');
+        background-image: url('../../img/backgrounds/home-hero-bg-2xl-2560x1440.jpg');
     }
 }
 
