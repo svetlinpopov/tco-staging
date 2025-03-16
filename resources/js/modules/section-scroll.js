@@ -9,10 +9,11 @@ let currentSectionIndex = 0;
 let isScrolling = false;
 let sections = [];
 let animationFrame = null;
+let lastWheelTime = 0;
 
 // Animation settings
-const ANIMATION_DURATION = 1750; // 1.75 seconds in milliseconds
-const EASING_FUNCTION = easeOutCubic; // Fast start, slow end
+const ANIMATION_DURATION = 1750; // Set back to original duration for smoother effect
+const WHEEL_COOLDOWN = 1750; // ms to wait between wheel events - prevents rapid triggering
 
 /**
  * Initialize section scroll functionality
@@ -25,7 +26,7 @@ export function initSectionScroll() {
     // Set initial section index based on current scroll position
     setInitialSectionIndex();
 
-    // Add wheel event listener with passive false to allow preventDefault
+    // Add wheel event listener with passive false to allow preventDefault only when needed
     window.addEventListener('wheel', handleScroll, { passive: false });
 
     // Add touch events for mobile
@@ -79,35 +80,20 @@ export function initSectionScroll() {
  */
 function setInitialSectionIndex() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    let newIndex = 0;
-    let bestVisibility = 0;
+    const viewportHeight = window.innerHeight;
+    const viewportMiddle = scrollTop + (viewportHeight / 2);
 
-    // Find which section has the highest visibility percentage in viewport
+    // Find which section contains the middle of the viewport
     for (let i = 0; i < sections.length; i++) {
         const section = sections[i];
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionBottom = sectionTop + sectionHeight;
+        const sectionBottom = sectionTop + section.offsetHeight;
 
-        // Calculate how much of the section is visible in the viewport
-        const visibleTop = Math.max(scrollTop, sectionTop);
-        const visibleBottom = Math.min(scrollTop + window.innerHeight, sectionBottom);
-        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-
-        // Calculate visibility as percentage of section height
-        const visibilityPercent = visibleHeight / sectionHeight;
-
-        // If this section has higher visibility, select it
-        if (visibilityPercent > bestVisibility) {
-            bestVisibility = visibilityPercent;
-            newIndex = i;
+        if (viewportMiddle >= sectionTop && viewportMiddle < sectionBottom) {
+            currentSectionIndex = i;
+            break;
         }
     }
-
-    // Update current section index
-    currentSectionIndex = newIndex;
-
-    console.log('Current section updated to:', currentSectionIndex + 1);
 }
 
 /**
@@ -115,14 +101,18 @@ function setInitialSectionIndex() {
  * @param {WheelEvent} e - The wheel event
  */
 function handleScroll(e) {
-    // Prevent default scrolling behavior
-    e.preventDefault();
+    // Check if wheel event is within cooldown period to prevent over-triggering
+    const now = Date.now();
+    if (now - lastWheelTime < WHEEL_COOLDOWN || isScrolling) {
+        return;
+    }
 
-    // If already scrolling, ignore additional scroll events
-    if (isScrolling) return;
+    // Update last wheel time
+    lastWheelTime = now;
 
-    // Determine scroll direction
-    const scrollDirection = e.deltaY > 0 ? 'down' : 'up';
+    // Determine scroll direction (normalized for different browsers/devices)
+    const delta = e.deltaY || -e.wheelDelta || e.detail;
+    const scrollDirection = delta > 0 ? 'down' : 'up';
 
     // Calculate target section index
     const targetIndex = scrollDirection === 'down' ?
@@ -131,6 +121,7 @@ function handleScroll(e) {
 
     // If we can actually move in that direction
     if (targetIndex !== currentSectionIndex) {
+        e.preventDefault(); // Only prevent default when we're actually changing sections
         scrollToSection(targetIndex);
     }
 }
@@ -140,7 +131,7 @@ function handleScroll(e) {
  * @param {string} direction - The scroll direction ('up' or 'down')
  */
 function handleTouchScroll(direction) {
-    // If already scrolling, ignore additional scroll events
+    // If already scrolling, ignore additional events
     if (isScrolling) return;
 
     // Calculate target section index
@@ -173,13 +164,13 @@ function scrollToSection(index) {
     const startPosition = window.scrollY || document.documentElement.scrollTop;
     const distance = targetPosition - startPosition;
 
-    // Animation variables
-    let startTime = null;
-
     // Cancel any ongoing animation
     if (animationFrame) {
         cancelAnimationFrame(animationFrame);
     }
+
+    // Animation variables
+    let startTime = null;
 
     // Animation function
     function animate(currentTime) {
@@ -191,7 +182,7 @@ function scrollToSection(index) {
         // If animation should continue
         if (elapsedTime < ANIMATION_DURATION) {
             // Calculate progress with easing
-            const progress = EASING_FUNCTION(elapsedTime / ANIMATION_DURATION);
+            const progress = easeOutCubic(elapsedTime / ANIMATION_DURATION);
 
             // Set new scroll position
             window.scrollTo(0, startPosition + distance * progress);
@@ -205,9 +196,11 @@ function scrollToSection(index) {
             // Update current section index
             currentSectionIndex = index;
 
-            // Reset scrolling state
-            isScrolling = false;
-            animationFrame = null;
+            // Reset scrolling state after a brief delay to prevent immediate re-triggering
+            setTimeout(() => {
+                isScrolling = false;
+                animationFrame = null;
+            }, 100);
         }
     }
 
@@ -216,12 +209,12 @@ function scrollToSection(index) {
 }
 
 /**
- * Easing function: Cubic ease-out (fast start, slow end)
+ * Easing function: Quintic ease-out (very fast start, pronounced slow down at the end)
  * @param {number} t - Progress from 0 to 1
  * @return {number} Eased progress from 0 to 1
  */
 function easeOutCubic(t) {
-    return 1 - Math.pow(1 - t, 3);
+    return 1 - Math.pow(1 - t, 5);
 }
 
 /**
