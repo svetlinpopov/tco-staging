@@ -58,7 +58,7 @@
     position: relative;
     z-index: 10;
     margin-top: 100px;
-    margin-left: 115px;
+    margin-left: 105px;
 }
 
 .section-2-dots {
@@ -66,73 +66,59 @@
     flex-direction: column;
 }
 
-.dot-number-combo {
+/* New dot navigation structure with renamed classes */
+.s2-nav-item {
     display: flex;
-    align-items: center;
-    margin-bottom: 50px;
+    align-items: flex-start;
     position: relative;
 }
 
-.dot-number-combo .combo-text {
-    margin-top: 15px;
-    margin-left: 50px;
-    color: var(--color-charcoal);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.1;
-}
-
-.dot-number-combo:not(:last-child)::after {
-    content: '';
-    background-color: var(--color-light-blue);
-    z-index: -1;
-    width: 2px;
-    height: 70px;
-    position: absolute;
-    top: 17px;
-    left: 3px;
-    opacity: 0.3;
-}
-
-/* Line after active dot remains at 30% opacity */
-.dot-number-combo.active ~ .dot-number-combo::after {
-    opacity: 0.3;
-}
-
-/* Line before active dot becomes active */
-.dot-number-combo:not(.active) + .dot-number-combo.active::before {
-    content: '';
-    background-color: var(--color-light-blue);
-    z-index: -1;
-    width: 2px;
-    height: 70px;
-    position: absolute;
-    top: -53px; /* Positions it to connect to the dot above */
-    left: 3px;
-    opacity: 1;
-}
-
-/* Add line to last dot but hide overflow */
-.dot-number-combo:last-child {
+.s2-nav-item:last-child {
     margin-bottom: 0;
     position: relative;
     overflow: hidden;
     padding-bottom: 20px;
 }
 
-.dot-number-combo:last-child::after {
-    content: '';
-    background-color: var(--color-light-blue);
-    z-index: -1;
-    width: 2px;
-    height: 50px;
-    position: absolute;
-    top: 17px;
-    left: 3px;
-    opacity: 0.3;
+/* Dot container with fixed width */
+.s2-dot-container {
+    width: 20px;
+    height: 25px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.dot-number-combo .dot {
+/* Number container with fixed width */
+.s2-number-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Text container with flexible width */
+.s2-text-container {
+    font-weight: 400;
+    color: var(--color-charcoal);
+    line-height: 1.1;
+    font-size: 16px;
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-top: 2px;
+    min-height: 75px;
+    opacity: 0.3; /* Default opacity for inactive items */
+    transition: opacity 0.3s ease;
+}
+
+.s2-nav-item.active .s2-text-container {
+    opacity: 1; /* Full opacity for active item */
+}
+
+/* Dot styling */
+.s2-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -142,23 +128,77 @@
     transition: opacity 0.3s ease;
 }
 
-.dot-number-combo.active .dot {
+.s2-nav-item.active .s2-dot {
     opacity: 1;
     background-color: var(--color-light-blue);
 }
 
-.dot-number-combo .number {
-    margin-left: 13px;
+/* Number styling */
+.s2-number {
     font-weight: 400;
     font-style: italic;
     font-size: 18px;
+    line-height: 1.1;
+    padding-top: 2px;
     color: var(--color-light-blue);
     opacity: 0.3;
     transition: opacity 0.3s ease;
 }
 
-.dot-number-combo.active .number {
+.s2-nav-item.active .s2-number {
     opacity: 1;
+}
+
+/* Text styling */
+.s2-nav-text {
+    color: var(--color-charcoal);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* Connector lines between dots */
+.s2-nav-item:not(:last-child)::after {
+    content: '';
+    background-color: var(--color-light-blue);
+    z-index: -1;
+    width: 2px;
+    height: 70px;
+    position: absolute;
+    top: 15px;
+    left: 9px;
+    opacity: 0.3;
+}
+
+/* Line after active dot remains at 30% opacity */
+.s2-nav-item.active ~ .s2-nav-item::after {
+    opacity: 0.3;
+}
+
+/* Line before active dot becomes active */
+.s2-nav-item:not(.active) + .s2-nav-item.active::before {
+    content: '';
+    background-color: var(--color-light-blue);
+    z-index: -1;
+    width: 2px;
+    height: 70px;
+    position: absolute;
+    top: -53px; /* Positions it to connect to the dot above */
+    left: 10px; /* Centered in dot-container */
+    opacity: 1;
+}
+
+/* Add line to last dot but hide overflow */
+.s2-nav-item:last-child::after {
+    content: '';
+    background-color: var(--color-light-blue);
+    z-index: -1;
+    width: 2px;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    left: 9px;
+    opacity: 0.3;
 }
 
 /* Step number circles */
@@ -195,6 +235,17 @@
     font-size: 16px;
     line-height: 1.5;
     color: var(--color-charcoal);
+}
+
+/* Button container alignment */
+.s2-button-container {
+    margin-left: 105px;
+}
+
+/* Left column padding */
+.s2-left-column {
+    padding: 2rem;
+    padding-left: 3%;
 }
 
 /* Responsive background images */
