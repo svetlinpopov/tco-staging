@@ -17,6 +17,148 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: var(--color-black-haze);
+}
+
+/* Section 2 Headlines */
+.section-2-headlines-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.section-2-headlines-wrapper {
+    position: relative;
+    text-align: left;
+}
+
+#section-2-headline-1,
+#section-2-headline-2,
+#section-2-headline-3 {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.1;
+    color: var(--color-charcoal);
+    margin-bottom: -8px;
+}
+
+#section-2-headline-3 {
+    margin-left: 110px;
+}
+
+#section-2-headline-3 span {
+    color: var(--color-del-rio);
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Vertical Dot Navigation */
+.section-2-nav-container {
+    position: relative;
+    z-index: 10;
+    margin-top: 100px;
+    margin-left: 115px;
+}
+
+.section-2-dots {
+    display: flex;
+    flex-direction: column;
+}
+
+.dot-number-combo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.dot-number-combo .combo-text {
+    margin-top: 15px;
+    margin-left: 50px;
+    color: var(--color-charcoal);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.dot-number-combo:not(:last-child)::after {
+    content: '';
+    background-color: var(--color-light-blue);
+    z-index: -1;
+    width: 2px;
+    height: 70px;
+    position: absolute;
+    top: 17px;
+    left: 3px;
+    opacity: 0.3;
+}
+
+/* Line after active dot remains at 30% opacity */
+.dot-number-combo.active ~ .dot-number-combo::after {
+    opacity: 0.3;
+}
+
+/* Line before active dot becomes active */
+.dot-number-combo:not(.active) + .dot-number-combo.active::before {
+    content: '';
+    background-color: var(--color-light-blue);
+    z-index: -1;
+    width: 2px;
+    height: 70px;
+    position: absolute;
+    top: -53px; /* Positions it to connect to the dot above */
+    left: 3px;
+    opacity: 1;
+}
+
+/* Add line to last dot but hide overflow */
+.dot-number-combo:last-child {
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.dot-number-combo:last-child::after {
+    content: '';
+    background-color: var(--color-light-blue);
+    z-index: -1;
+    width: 2px;
+    height: 50px;
+    position: absolute;
+    top: 17px;
+    left: 3px;
+    opacity: 0.3;
+}
+
+.dot-number-combo .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-blue);
+    background-color: transparent;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.dot-number-combo.active .dot {
+    opacity: 1;
+    background-color: var(--color-light-blue);
+}
+
+.dot-number-combo .number {
+    margin-left: 13px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--color-light-blue);
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.dot-number-combo.active .number {
+    opacity: 1;
 }
 
 /* Step number circles */
@@ -87,6 +229,14 @@
 }
 
 /* Responsive layout adjustments */
+@media (max-width: 1024px) {
+    #section-2-headline-1,
+    #section-2-headline-2,
+    #section-2-headline-3 {
+        font-size: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     .section-2-wrapper .flex {
         flex-direction: column;
@@ -95,5 +245,19 @@
     .section-2-wrapper .w-3\/5,
     .section-2-wrapper .w-2\/5 {
         width: 100%;
+    }
+
+    #section-2-headline-1,
+    #section-2-headline-2,
+    #section-2-headline-3 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 640px) {
+    #section-2-headline-1,
+    #section-2-headline-2,
+    #section-2-headline-3 {
+        font-size: 32px;
     }
 }
