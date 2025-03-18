@@ -68,10 +68,17 @@
         </div>
 
         <!-- Right column (40%) -->
-        <div class="w-2/5 h-full p-8 flex items-center justify-center">
-            <!-- This area will contain an image or additional content -->
-            <div class="w-full h-full flex items-center justify-center">
-                <p class="text-lg text-gray-500">Image/Content Area</p>
+        <div class="w-2/5 h-full flex items-center justify-center s2-right-column">
+            <!-- Image Slider Container -->
+            <div class="image-slider-container">
+                <img src="{{ Vite::asset('resources/img/homepage/section-2-woman-nature.jpg') }}" alt="Woman enjoying nature" class="slide-background">
+                <div class="slide-text">Personalized.</div>
+
+                <!-- SVG Ellipses Container -->
+                <div class="ellipses-container">
+                    <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-left">
+                    <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-right">
+                </div>
             </div>
         </div>
     </div>
