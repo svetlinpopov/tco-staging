@@ -25,6 +25,8 @@
     will-change: transform, opacity; /* Hardware acceleration hint */
     -webkit-transform: translateZ(0); /* Force GPU acceleration */
     transform: translateZ(0);
+    border-radius: 24px; /* Added for rounded corners */
+    overflow: hidden; /* Added to prevent overflow */
 }
 
 /* Active slide */
@@ -68,23 +70,36 @@
     z-index: 1;
 }
 
+/* SVG ellipse animations */
+@keyframes move-ellipse-left {
+    0% { top: 0px; left: -170px; }
+    100% { top: -70px; left: -70px; }
+}
+
+@keyframes move-ellipse-right {
+    0% { top: 0px; right: -170px; }
+    100% { top: -70px; right: -70px; }
+}
+
 /* Top-left ellipse */
 .ellipse-top-left {
     position: absolute;
-    top: -70px;
-    left: -70px;
     width: 441px;
     height: 442px;
     transform: scaleX(-1);
+    /* Animation initially set to final position */
+    top: -70px;
+    left: -70px;
 }
 
 /* Top-right ellipse */
 .ellipse-top-right {
     position: absolute;
-    top: -70px;
-    right: -70px;
     width: 441px;
     height: 442px;
+    /* Animation initially set to final position */
+    top: -70px;
+    right: -70px;
 }
 
 /* Responsive adjustments */

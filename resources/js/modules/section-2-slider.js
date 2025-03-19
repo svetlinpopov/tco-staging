@@ -40,11 +40,39 @@ export function initSection2Slider() {
             slide.classList.add('active');
             slide.style.opacity = '1';
             slide.style.transform = 'translateY(0) scale(1)';
+
+            // Initialize SVG positions for first slide
+            const leftEllipse = slide.querySelector('.ellipse-top-left');
+            const rightEllipse = slide.querySelector('.ellipse-top-right');
+
+            if (leftEllipse) {
+                leftEllipse.style.top = '-70px';
+                leftEllipse.style.left = '-70px';
+            }
+
+            if (rightEllipse) {
+                rightEllipse.style.top = '-70px';
+                rightEllipse.style.right = '-70px';
+            }
         } else {
             // Other slides are positioned below
             slide.classList.remove('active');
             slide.style.opacity = '0';
             slide.style.transform = `translateY(100%) scale(${SLIDER_CONFIG.startScale})`;
+
+            // Reset SVG positions for other slides
+            const leftEllipse = slide.querySelector('.ellipse-top-left');
+            const rightEllipse = slide.querySelector('.ellipse-top-right');
+
+            if (leftEllipse) {
+                leftEllipse.style.top = '0px';
+                leftEllipse.style.left = '-170px';
+            }
+
+            if (rightEllipse) {
+                rightEllipse.style.top = '0px';
+                rightEllipse.style.right = '-170px';
+            }
         }
     });
 
@@ -139,6 +167,22 @@ function rotateSlides() {
         nextSlide.style.transform = `translateY(100%) scale(${SLIDER_CONFIG.startScale})`;
         nextSlide.style.zIndex = '2';
 
+        // Reset SVG positions for next slide
+        const nextLeftEllipse = nextSlide.querySelector('.ellipse-top-left');
+        const nextRightEllipse = nextSlide.querySelector('.ellipse-top-right');
+
+        if (nextLeftEllipse) {
+            nextLeftEllipse.style.transition = 'none';
+            nextLeftEllipse.style.top = '0px';
+            nextLeftEllipse.style.left = '-170px';
+        }
+
+        if (nextRightEllipse) {
+            nextRightEllipse.style.transition = 'none';
+            nextRightEllipse.style.top = '0px';
+            nextRightEllipse.style.right = '-170px';
+        }
+
         // Force reflow
         void nextSlide.offsetWidth;
 
@@ -151,6 +195,19 @@ function rotateSlides() {
             // Animate next slide into position with easeOutQuart for fast start, slow end
             nextSlide.style.transition = `transform ${SLIDER_CONFIG.transitionTime}ms cubic-bezier(0.22, 0.61, 0.36, 1)`;
             nextSlide.style.transform = `translateY(0) scale(${SLIDER_CONFIG.endScale})`;
+
+            // Animate SVG ellipses
+            if (nextLeftEllipse) {
+                nextLeftEllipse.style.transition = `top ${SLIDER_CONFIG.transitionTime}ms cubic-bezier(0.22, 0.61, 0.36, 1), left ${SLIDER_CONFIG.transitionTime}ms cubic-bezier(0.22, 0.61, 0.36, 1)`;
+                nextLeftEllipse.style.top = '-70px';
+                nextLeftEllipse.style.left = '-70px';
+            }
+
+            if (nextRightEllipse) {
+                nextRightEllipse.style.transition = `top ${SLIDER_CONFIG.transitionTime}ms cubic-bezier(0.22, 0.61, 0.36, 1), right ${SLIDER_CONFIG.transitionTime}ms cubic-bezier(0.22, 0.61, 0.36, 1)`;
+                nextRightEllipse.style.top = '-70px';
+                nextRightEllipse.style.right = '-70px';
+            }
 
             // After animation completes
             setTimeout(() => {
