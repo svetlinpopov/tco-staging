@@ -157,34 +157,33 @@
     line-height: 1.2;
 }
 
-/* Connector lines between dots */
+/* Connector lines between dots - modified for animation */
 .s2-nav-item:not(:last-child)::after {
     content: '';
-    background-color: var(--color-light-blue);
+    background: linear-gradient(to bottom, var(--color-light-blue) 50%, rgba(141, 159, 202, 0.3) 50%);
+    background-size: 100% 200%;
+    background-position: 0 100%; /* Start with the transparent part */
     z-index: -1;
     width: 2px;
     height: 70px;
     position: absolute;
     top: 15px;
     left: 9px;
-    opacity: 0.3;
+    transition: background-position 0.5s ease-out;
 }
 
-/* Line after active dot remains at 30% opacity */
-.s2-nav-item.active ~ .s2-nav-item::after {
-    opacity: 0.3;
+/* Line active state - animate the fill */
+.s2-nav-item.line-active::after {
+    background-position: 0 0; /* Move to show the solid color */
 }
 
-/* Line before active dot becomes active */
-.s2-nav-item:not(.active) + .s2-nav-item.active::before {
-    content: '';
-    background-color: var(--color-light-blue);
-    z-index: -1;
-    width: 2px;
-    height: 70px;
-    position: absolute;
-    top: -53px; /* Positions it to connect to the dot above */
-    left: 10px; /* Centered in dot-container */
+/* Make sure all lines after active item remain at 30% opacity - REMOVED THIS RULE */
+/* .s2-nav-item.active ~ .s2-nav-item::after {
+    opacity: 0.3;
+} */
+
+/* Make sure last item still has its connecting line when active */
+.s2-nav-item:last-child.active::after {
     opacity: 1;
 }
 
