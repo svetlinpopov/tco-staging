@@ -69,15 +69,39 @@
 
         <!-- Right column (40%) -->
         <div class="w-2/5 h-full flex items-center justify-center s2-right-column">
-            <!-- Image Slider Container -->
-            <div class="image-slider-container">
-                <img src="{{ Vite::asset('resources/img/homepage/section-2-woman-nature.jpg') }}" alt="Woman enjoying nature" class="slide-background">
-                <div class="slide-text">Personalized.</div>
+            <!-- Hard-coded dimensions for testing -->
+            <div class="image-slider-container" style="width: 100%; max-width: 546px; height: 572px;">
+                <!-- Slide 1 -->
+                <div class="slider-slide active" id="slide-1">
+                    <img src="{{ Vite::asset('resources/img/homepage/section-2-woman-nature.jpg') }}" alt="Woman enjoying nature" class="slide-background">
+                    <div class="slide-text">Personalized.</div>
 
-                <!-- SVG Ellipses Container -->
-                <div class="ellipses-container">
-                    <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-left">
-                    <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-right">
+                    <div class="ellipses-container">
+                        <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-left">
+                        <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-right">
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slider-slide" id="slide-2">
+                    <img src="{{ Vite::asset('resources/img/homepage/section-2-african-outdoors.jpg') }}" alt="Person enjoying outdoors" class="slide-background">
+                    <div class="slide-text">Guidance.</div>
+
+                    <div class="ellipses-container">
+                        <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-left">
+                        <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-right">
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slider-slide" id="slide-3">
+                    <img src="{{ Vite::asset('resources/img/homepage/section-2-blonde-outdoors.jpg') }}" alt="Person enjoying outdoors" class="slide-background">
+                    <div class="slide-text">Results.</div>
+
+                    <div class="ellipses-container">
+                        <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-left">
+                        <img src="{{ Vite::asset('resources/img/ellipse-section-2.svg') }}" alt="Decorative ellipse" class="ellipse-top-right">
+                    </div>
                 </div>
             </div>
         </div>

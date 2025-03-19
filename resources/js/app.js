@@ -14,6 +14,7 @@ import { initMenuToggle } from './modules/menu-toggle';
 import { initHeroAnimations } from './modules/hero-animations';
 import { initStatCards, registerStatCardsComponent } from './modules/stat-cards';
 import { initSectionScroll } from './modules/section-scroll';
+import { initSection2Slider } from './modules/section-2-slider';
 
 /**
  * Initialize all functionality
@@ -33,6 +34,9 @@ function initializeAll() {
 
     // Initialize stat cards
     initStatCards();
+
+    // Initialize section 2 slider
+    initSection2Slider();
 
     // Initialize section scroll - added for smooth section-by-section scrolling
     initSectionScroll();
